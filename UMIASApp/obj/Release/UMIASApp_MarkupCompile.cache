@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-d:\Eliza\Desktop\EMIAS\UMIAS\UMIASApp\obj\Debug\
+d:\Eliza\Desktop\EMIAS\UMIAS\UMIASApp\obj\Release\
 UMIASApp
 none
 false
-DEBUG;TRACE
+TRACE
 d:\Eliza\Desktop\EMIAS\UMIAS\UMIASApp\App.xaml
 1871162140
 
 5-685533974
-18-2070825711
+18675884491
 View\MainWindow.xaml;
 
 True
