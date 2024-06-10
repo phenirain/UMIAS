@@ -12,3 +12,17 @@ D:\Desktop\College\Programming\UMIAS\Themes\obj\Debug\Themes.csproj.CoreCompileI
 D:\Desktop\College\Programming\UMIAS\Themes\obj\Debug\Themes.csproj.CopyComplete
 D:\Desktop\College\Programming\UMIAS\Themes\obj\Debug\Themes.dll
 D:\Desktop\College\Programming\UMIAS\Themes\obj\Debug\Themes.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\bin\Debug\Themes.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\bin\Debug\Themes.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\bin\Debug\Wpf.Ui.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\bin\Debug\Wpf.Ui.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\bin\Debug\Wpf.Ui.xml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\obj\Debug\Themes.csproj.AssemblyReference.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\obj\Debug\Dark.baml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\obj\Debug\Light.baml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\obj\Debug\Themes_MarkupCompile.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\obj\Debug\Themes.g.resources
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\obj\Debug\Themes.csproj.CoreCompileInputs.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\obj\Debug\Themes.csproj.CopyComplete
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\obj\Debug\Themes.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\Themes\obj\Debug\Themes.pdb

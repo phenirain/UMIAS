@@ -27,3 +27,36 @@ D:\Desktop\College\Programming\UMIAS\UMIASApp\obj\Debug\UMIASApp.csproj.CoreComp
 D:\Desktop\College\Programming\UMIAS\UMIASApp\obj\Debug\UMIASApp.csproj.CopyComplete
 D:\Desktop\College\Programming\UMIAS\UMIASApp\obj\Debug\UMIASApp.exe
 D:\Desktop\College\Programming\UMIAS\UMIASApp\obj\Debug\UMIASApp.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp.csproj.AssemblyReference.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\View\MainWindow.g.cs
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\View\Page\Doctor_Autorize.g.cs
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\View\Page\Start_window.g.cs
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\App.g.cs
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp_MarkupCompile.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp_MarkupCompile.lref
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp.exe
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\UMIASApp.exe.config
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\UMIASApp.exe
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\UMIASApp.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\BingingLibrary.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Themes.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Wpf.Ui.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\BingingLibrary.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Themes.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Wpf.Ui.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\bin\Debug\Wpf.Ui.xml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\App.baml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\View\MainWindow.baml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\View\Page\Doctor_Autorize.baml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\View\Page\Start_window.baml
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp.g.resources
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp.Properties.Resources.resources
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp.csproj.GenerateResource.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp.csproj.CoreCompileInputs.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\UMIASApp.csproj.CopyComplete
