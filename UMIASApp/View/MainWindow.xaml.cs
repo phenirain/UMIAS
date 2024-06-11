@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using UMIASApp.View.Page;
 
 namespace UMIASApp
 {
@@ -10,6 +11,25 @@ namespace UMIASApp
         public MainWindow()
         {
             InitializeComponent();
+            Start_window.Content = new Doctor_Autorize();
+
         }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void ToRollButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Maximized; // Развернуть окно на весь экран
+        }
+
     }
 }
+
