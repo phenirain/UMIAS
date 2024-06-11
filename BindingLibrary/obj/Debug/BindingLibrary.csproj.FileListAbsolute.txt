@@ -1,0 +1,16 @@
+D:\Desktop\College\Programming\UMIAS\BindingLibrary\bin\Debug\BingingLibrary.dll
+D:\Desktop\College\Programming\UMIAS\BindingLibrary\bin\Debug\BingingLibrary.pdb
+D:\Desktop\College\Programming\UMIAS\BindingLibrary\obj\Debug\BindingLibrary.csproj.AssemblyReference.cache
+D:\Desktop\College\Programming\UMIAS\BindingLibrary\obj\Debug\BingingLibrary.Properties.Resources.resources
+D:\Desktop\College\Programming\UMIAS\BindingLibrary\obj\Debug\BindingLibrary.csproj.GenerateResource.cache
+D:\Desktop\College\Programming\UMIAS\BindingLibrary\obj\Debug\BindingLibrary.csproj.CoreCompileInputs.cache
+D:\Desktop\College\Programming\UMIAS\BindingLibrary\obj\Debug\BingingLibrary.dll
+D:\Desktop\College\Programming\UMIAS\BindingLibrary\obj\Debug\BingingLibrary.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\BindingLibrary\bin\Debug\BingingLibrary.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\BindingLibrary\bin\Debug\BingingLibrary.pdb
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\BindingLibrary\obj\Debug\BindingLibrary.csproj.AssemblyReference.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\BindingLibrary\obj\Debug\BingingLibrary.Properties.Resources.resources
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\BindingLibrary\obj\Debug\BindingLibrary.csproj.GenerateResource.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\BindingLibrary\obj\Debug\BindingLibrary.csproj.CoreCompileInputs.cache
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\BindingLibrary\obj\Debug\BingingLibrary.dll
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\BindingLibrary\obj\Debug\BingingLibrary.pdb
