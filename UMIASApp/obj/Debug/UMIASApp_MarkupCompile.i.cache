@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 d:\Eliza\Desktop\EMIAS\UMIAS\UMIASApp\App.xaml
-81155725703
+14255828262
 
-131480110389
+19-918656714
 18-2070825711
-View\MainWindow.xaml;View\UserEl\AllPosts.xaml;View\UserEl\Analyzes.xaml;View\UserEl\ChoosingSpecialist.xaml;View\UserEl\Phone.xaml;View\UserEl\Profile.xaml;View\UserEl\RecordingManagement.xaml;View\UserEl\RecordPicture.xaml;
+View\Doctor\DoctorEl\ContainerDirections.xaml;View\Doctor\DoctorEl\Directions.xaml;View\Doctor\DoctorEl\RecordCompleted.xaml;View\Doctor\DoctorEl\Schedule.xaml;View\Doctor\DoctorEl\StartOrCancel.xaml;View\Doctor\GridDoc.xaml;View\MainWindow.xaml;View\UserEl\AllPosts.xaml;View\UserEl\Analyzes.xaml;View\UserEl\ChoosingSpecialist.xaml;View\UserEl\Phone.xaml;View\UserEl\Profile.xaml;View\UserEl\RecordingManagement.xaml;View\UserEl\RecordPicture.xaml;
 
 True
 

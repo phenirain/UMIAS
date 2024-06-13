@@ -5,8 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UMIASApp.View.UserEl"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             d:DesignHeight="63" d:DesignWidth="349">
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="NameOfAnalysis" Text="Определение антигена Coronavirus (SARS-CoV-2) качественно" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="DateOfAnalysis" Text="29 декабря 2024 г." Grid.Column="1" Grid.Row="2" FontSize="12" Foreground="#807F7F" TextAlignment="Center"  VerticalAlignment="Center" />
     </Grid>
 </UserControl>

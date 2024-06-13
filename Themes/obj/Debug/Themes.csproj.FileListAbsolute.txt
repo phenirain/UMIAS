@@ -12,3 +12,17 @@ D:\Desktop\College\Programming\UMIAS\Themes\obj\Debug\Themes.csproj.CoreCompileI
 D:\Desktop\College\Programming\UMIAS\Themes\obj\Debug\Themes.csproj.CopyComplete
 D:\Desktop\College\Programming\UMIAS\Themes\obj\Debug\Themes.dll
 D:\Desktop\College\Programming\UMIAS\Themes\obj\Debug\Themes.pdb
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\bin\Debug\Themes.dll
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\bin\Debug\Themes.pdb
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\bin\Debug\Wpf.Ui.dll
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\bin\Debug\Wpf.Ui.pdb
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\bin\Debug\Wpf.Ui.xml
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\obj\Debug\Themes.csproj.AssemblyReference.cache
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\obj\Debug\Dark.baml
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\obj\Debug\Light.baml
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\obj\Debug\Themes_MarkupCompile.cache
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\obj\Debug\Themes.g.resources
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\obj\Debug\Themes.csproj.CoreCompileInputs.cache
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\obj\Debug\Themes.csproj.Up2Date
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\obj\Debug\Themes.dll
+d:\Eliza\Desktop\EMIAS\UMIAS\Themes\obj\Debug\Themes.pdb
