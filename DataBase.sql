@@ -16,11 +16,11 @@ GO
 
 INSERT INTO Admin (Surname, Name, Patronymic, EnterPassword) 
 VALUES 
-('Биктимиров', 'Руслан', 'Ручланович', 'Ruslan123'),
-('Синицына', 'Лиза', 'Лизовна', 'Lisa123'),
-('Васюков', 'Никита', 'Максимович', 'Nikita123'),
-('Святов', 'Глеб', 'Андреевич', 'Gleb123'),
-('Бектурганов', 'Богдан', 'Богданович', 'Bogdan123');
+('Biktimirov', 'Ruslan', 'Ruslanovich', 'Ruslan123'),
+('Sinitsyna', 'Lisa', 'Lisovna', 'Lisa123'),
+('Vasyukov', 'Nikita', 'Maksimovich', 'Nikita123'),
+('Svyatov', 'Gleb', 'Andreevich', 'Gleb123'),
+('Bekturganov', 'Bogdan', 'Bogdanovich', 'Bogdan123');
 GO
 
 CREATE TABLE Specialities (
@@ -32,9 +32,9 @@ GO
 
 INSERT INTO Specialities (Name) 
 VALUES 
-('Терапевт'), 
-('Хирург'), 
-('Окулист');
+('Therapist'), 
+('Surgeon'), 
+('Ophthalmologist');
 GO
 
 CREATE TABLE Patient (
@@ -54,8 +54,8 @@ GO
 
 INSERT INTO Patient (OMS, Surname, Name, Patronymic, BirthDate, Address, LivingAddress, Phone, Email, Nickname) 
 VALUES 
-(1234567890417542, 'Сидоров', 'Степан', 'Петрович', '1990-01-15', 'ул. Ленина, д. 1', 'ул. Нежинская, д.20', '+7 (999) 123-45-67', 'example@mail.com', 'ivan89'),
-(2345678901334785, 'Петрова', 'Мария', 'Игоревна', '1985-07-20', 'пр. Сталина, д. 5, кв. 10', 'ул. Центральная д.10', '+7 (999) 456-78-90', 'masha85@mail.com', 'Maria52');
+(1234567890417542, 'Sidorov', 'Stepan', 'Petrovich', '1990-01-15', 'st. Lenina, h. 1', 'st. Nezhinskaya, h.20', '+7 (999) 123-45-67', 'example@mail.com', 'ivan89'),
+(2345678901334785, 'Petrova', 'Maria', 'Igorevna', '1985-07-20', 'st. Stalina, h. 5', 'st. Middle h.10', '+7 (999) 456-78-90', 'masha85@mail.com', 'Maria52');
 GO
 
 CREATE TABLE Status (
@@ -67,9 +67,9 @@ GO
 
 INSERT INTO Status (Name) 
 VALUES 
-('Активный'), 
-('На лечении'), 
-('Выписан');
+('Active'), 
+('On treatment'), 
+('Discharged');
 GO
 
 CREATE TABLE Directions (
@@ -103,8 +103,8 @@ GO
 
 INSERT INTO Doctor (Surname, Name, Patronymic, IdSpeciality, EnterPassword, WorkAddress) 
 VALUES 
-('Петров', 'Алексей', 'Игоревич', 1, 'doctor123', 'Поликлиника №1'),
-('Иванова', 'Елена', 'Евгенеевна', 3, 'doc456', 'Детская поликлиника');
+('Petrov', 'Alexey', 'Igorevich', 1, 'doctor123', 'clinic №1'),
+('Ivanova', 'Elena', 'Evgenevna', 3, 'doc456', 'children clinic');
 GO
 
 CREATE TABLE Appointments (
@@ -137,8 +137,8 @@ GO
 
 INSERT INTO AppointmentDocument (Midappointment, Rtf)
 VALUES 
-(1, 'Талон1'),
-(2, 'Талон2');
+(1, 'Ticket1'),
+(2, 'Ticket2');
 GO
 
 CREATE TABLE AnalyseDocument (
@@ -151,8 +151,8 @@ GO
 
 INSERT INTO AnalyseDocument (Midappointment, Rtf)
 VALUES 
-(1, 'Результат1'),
-(2, 'Результат2');
+(1, 'Result1'),
+(2, 'Result2');
 GO
 
 CREATE TABLE ResearchDocument (
@@ -165,6 +165,6 @@ GO
 
 INSERT INTO ResearchDocument (Midappointment, Rtf)
 VALUES 
-(1, 'Документ1'),
-(2, 'Документ2');
+(1, 'Documnet1'),
+(2, 'Document2');
 GO
