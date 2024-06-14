@@ -5,8 +5,33 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UMIASApp.View.UserEl"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             d:DesignHeight="94" d:DesignWidth="349">
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="12*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="Doctor" Grid.Column="1" Grid.ColumnSpan="3"  Grid.RowSpan="3" Text="Врач общей практики (семейный врач)" Foreground="Black" TextAlignment="Center" FontSize="12"/>
+        <TextBlock x:Name="InitialsDoctor" Grid.Column="1" Grid.Row="3" Text="Иванов Иван Иванович" Foreground="#807F7F" TextAlignment="Left" FontSize="12"/>
+        <TextBlock x:Name="DateOfReceipt" Grid.Column="1"  Grid.Row="4" Text="30 мая" Foreground="#807F7F" TextAlignment="Left" FontSize="12"/>
+        <TextBlock x:Name="ReceptionAddress" Grid.Column="3"  Grid.Row="2" Text="Москва, Профсоюзная улица, д. 111А" Foreground="#807F7F" TextAlignment="Right" FontSize="12"  Grid.RowSpan="4" TextWrapping="Wrap"/>
+        <ui:Button x:Name="Postpone" Style="{DynamicResource ButtonBar}" Grid.Row="6" Grid.Column="1" Background="#007BFE" HorizontalAlignment="Center" Width="160" Height="18" Content="Перенести" Foreground="#FFFFFEFE"/>
+        <ui:Button x:Name="Сancel" Grid.Row="6" Grid.Column="3" Background="#FE0000"  HorizontalAlignment="Center" Width="160" Height="18" Content="Отменить"/>
     </Grid>
 </UserControl>
