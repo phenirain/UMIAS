@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-d:\Eliza\Desktop\EMIAS\UMIAS\UMIASApp\obj\Debug\
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\obj\Debug\
 UMIASApp
 none
 false
 DEBUG;TRACE
-d:\Eliza\Desktop\EMIAS\UMIAS\UMIASApp\App.xaml
-1871162140
+C:\Users\glebo\OneDrive\Рабочий стол\Project_EMIAS\UMIAS\UMIASApp\App.xaml
+5-329014616
 
-5-685533974
-18-2070825711
-View\MainWindow.xaml;
+101025033654
+18302585169
+View\MainWindow.xaml;View\Page\Doctor_Autorize.xaml;View\Page\Start_window.xaml;View\Page\UserPage.xaml;View\Page_Admin.xaml;
 
 True
 

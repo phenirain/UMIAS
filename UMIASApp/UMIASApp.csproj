@@ -72,6 +72,8 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="Wpf.Ui, Version=3.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\WPF-UI.3.0.4\lib\net472\Wpf.Ui.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +87,12 @@
     <Compile Include="View\Page\IStart_window.cs" />
     <Compile Include="View\Page\Start_window.xaml.cs">
       <DependentUpon>Start_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Page\UserPage.xaml.cs">
+      <DependentUpon>UserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Page_Admin.xaml.cs">
+      <DependentUpon>Page_Admin.xaml</DependentUpon>
     </Compile>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -103,6 +111,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Page\Start_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Page\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Page_Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
