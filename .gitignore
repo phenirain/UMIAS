@@ -1,9 +1,9 @@
 .vs
-/BindingLibrary/bin
-/BindingLibrary/obj
-/Themes/bin
-/Themes/obj
-/UMIASApp/bin
-/UMIASApp/obj
-/UMIASAPI/bin
-/UMIASAPI/obj
+BindingLibrary/bin
+BindingLibrary/obj
+Themes/bin
+Themes/obj
+UMIASApp/bin
+UMIASApp/obj
+UMIASAPI/bin
+UMIASAPI/obj
