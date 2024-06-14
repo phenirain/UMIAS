@@ -79,6 +79,79 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<<<<<<< HEAD
+    <Compile Include="View\Doctor\DoctorEl\ContainerDirections.xaml.cs">
+      <DependentUpon>ContainerDirections.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Doctor\DoctorEl\Directions.xaml.cs">
+      <DependentUpon>Directions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Doctor\DoctorEl\RecordCompleted.xaml.cs">
+      <DependentUpon>RecordCompleted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Doctor\DoctorEl\Schedule.xaml.cs">
+      <DependentUpon>Schedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Doctor\DoctorEl\StartOrCancel.xaml.cs">
+      <DependentUpon>StartOrCancel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Doctor\GridDoc.xaml.cs">
+      <DependentUpon>GridDoc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserEl\AllPosts.xaml.cs">
+      <DependentUpon>AllPosts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserEl\Analyzes.xaml.cs">
+      <DependentUpon>Analyzes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserEl\ChoosingSpecialist.xaml.cs">
+      <DependentUpon>ChoosingSpecialist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserEl\Phone.xaml.cs">
+      <DependentUpon>Phone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserEl\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserEl\RecordingManagement.xaml.cs">
+      <DependentUpon>RecordingManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserEl\RecordPicture.xaml.cs">
+      <DependentUpon>RecordPicture.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\Doctor\DoctorEl\ContainerDirections.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\DoctorEl\Directions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\DoctorEl\RecordCompleted.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\DoctorEl\Schedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\DoctorEl\StartOrCancel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Doctor\GridDoc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+=======
+    <Compile Include="View\Page\Doctor_Autorize.xaml.cs">
+      <DependentUpon>Doctor_Autorize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Page\IStart_window.cs" />
+    <Compile Include="View\Page\Start_window.xaml.cs">
+      <DependentUpon>Start_window.xaml</DependentUpon>
+    </Compile>
+>>>>>>> f49e146b5d03a11e086fafccee3bc9de1ae1413f
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,6 +165,42 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+<<<<<<< HEAD
+    <Page Include="View\UserEl\AllPosts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserEl\Analyzes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserEl\ChoosingSpecialist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserEl\Phone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserEl\Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserEl\RecordingManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserEl\RecordPicture.xaml">
+=======
+    <Page Include="View\Page\Doctor_Autorize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Page\Start_window.xaml">
+>>>>>>> f49e146b5d03a11e086fafccee3bc9de1ae1413f
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -146,6 +255,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Doctor\color.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
