@@ -1,8 +1,9 @@
 .vs
-.idea
-UMIASApp/obj/
-UMIASApp/bin/
-BindingLibrary/obj/
-BindingLibrary/bin/
-Themes/obj/
-Themes/bin/
+/BindingLibrary/bin
+/BindingLibrary/obj
+/Themes/bin
+/Themes/obj
+/UMIASApp/bin
+/UMIASApp/obj
+/UMIASAPI/bin
+/UMIASAPI/obj
