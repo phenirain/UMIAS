@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Desktop\\College\\Programming\\UMIAS\\UMIASApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{723F0438-F899-40B2-B579-08214355815C}|UMIASApp.csproj|d:\\desktop\\college\\programming\\umias\\umiasapp\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{723F0438-F899-40B2-B579-08214355815C}|UMIASApp.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{723F0438-F899-40B2-B579-08214355815C}|UMIASApp.csproj|d:\\desktop\\college\\programming\\umias\\umiasapp\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{723F0438-F899-40B2-B579-08214355815C}|UMIASApp.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2F31BD93-563C-4984-98A2-906AEC87A6BA}|..\\Themes\\Themes.csproj|d:\\desktop\\college\\programming\\umias\\themes\\dark.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -22,6 +30,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Desktop\\College\\Programming\\UMIAS\\UMIASApp\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml",
+              "ToolTip": "D:\\Desktop\\College\\Programming\\UMIAS\\UMIASApp\\View\\MainWindow.xaml",
+              "RelativeToolTip": "View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-15T14:27:02.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Desktop\\College\\Programming\\UMIAS\\UMIASApp\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Desktop\\College\\Programming\\UMIAS\\UMIASApp\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "View\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T14:26:53.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Dark.xaml",
               "DocumentMoniker": "D:\\Desktop\\College\\Programming\\UMIAS\\Themes\\Dark.xaml",
               "RelativeDocumentMoniker": "..\\Themes\\Dark.xaml",
@@ -33,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ApiHelper.cs",
               "DocumentMoniker": "D:\\Desktop\\College\\Programming\\UMIAS\\UMIASApp\\Utilities\\ApiHelper.cs",
               "RelativeDocumentMoniker": "Utilities\\ApiHelper.cs",
@@ -41,8 +74,7 @@
               "RelativeToolTip": "Utilities\\ApiHelper.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T15:03:18.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T15:03:18.455Z"
             }
           ]
         }
