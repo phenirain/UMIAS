@@ -23,7 +23,7 @@ namespace UMIASWPF.View.User
         public UserWindow()
         {
             InitializeComponent();
-            Frame.Content = new MainPage();
+            Frame.Content = new ProfilePage();
         }
 
         private void MoveWindow(object sender, MouseButtonEventArgs e)

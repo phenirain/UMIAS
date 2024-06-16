@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UMIASWPF.View.User"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         mc:Ignorable="d"
-        Title="UserWindow" Height="850" Width="1500" WindowStyle="None" AllowsTransparency="True"
+        Title="UserWindow" Height="850" Width="1500"
         MouseLeftButtonDown="MoveWindow" FontFamily="{DynamicResource Inter}">
     
     <WindowChrome.WindowChrome>
@@ -28,16 +28,16 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15"/>
-            <ColumnDefinition Width="156.667"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="156.667*"/>
             <ColumnDefinition Width="71*"/>
-            <ColumnDefinition Width="36.187"/>
-            <ColumnDefinition Width="26"/>
-            <ColumnDefinition Width="16"/>
-            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="36.187*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="30*"/>
             <ColumnDefinition Width="1082*"/>
-            <ColumnDefinition Width="89"/>
-            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Column="8" Grid.Row="1" Panel.ZIndex="1">
