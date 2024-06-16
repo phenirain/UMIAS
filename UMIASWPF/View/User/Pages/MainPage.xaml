@@ -24,6 +24,7 @@
             <RowDefinition Height="Auto" MinHeight="250"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto" MinHeight="250"/>
+            <RowDefinition Height="100*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Запись" FontSize="20"/>
@@ -64,6 +65,6 @@
             <DatePicker Grid.Column="2" Style="{DynamicResource ClearDatePicker}" Foreground="{DynamicResource SecondaryForeground}" Tag="Записи по:"
                 FontSize="12" Height="34" Width="150"/>
         </Grid>
-        <ui:Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin="25, 20, 20, 10" Height="30" Style="{DynamicResource FocusingButton}" Content="Записаться на прием"></ui:Button>
+        <ui:Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Margin="25, 20, 20, 10" Height="30" Style="{DynamicResource FocusingButton}" Content="Записаться на прием"></ui:Button>
     </Grid>
 </Page>

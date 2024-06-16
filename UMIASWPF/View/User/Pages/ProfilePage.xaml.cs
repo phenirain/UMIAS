@@ -13,16 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace UMIASWPF.View.User.UserEl
+namespace UMIASWPF.View.User.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PhoneElement.xaml
+    /// Логика взаимодействия для ProfilePage.xaml
     /// </summary>
-    public partial class PhoneElement : UserControl
+    public partial class ProfilePage : Page
     {
-        public PhoneElement()
+        public ProfilePage()
         {
             InitializeComponent();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -37,6 +37,9 @@
     <Compile Update="View\User\Pages\MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\User\Pages\ProfilePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\User\UserEl\AllPostsElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -47,9 +50,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\User\UserEl\DoctorElement.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\User\UserEl\PhoneElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\User\UserEl\SpecialistElement.xaml.cs">
@@ -96,6 +96,9 @@
     <Page Update="View\User\Pages\MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\User\Pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\User\UserEl\AllPostsElement.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -106,9 +109,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\UserEl\DoctorElement.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\User\UserEl\PhoneElement.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\UserEl\SpecialistElement.xaml">

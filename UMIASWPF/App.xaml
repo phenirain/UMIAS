@@ -37,6 +37,15 @@
                 </Setter>
             </Style>
 
+            <Style x:Key="CopyButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="#FF007BFE"/>
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <ui:SymbolIcon Symbol="Copy24"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
             <Style x:Key="MinimizeButtonStyle" TargetType="Button">
                 <Setter Property="Background" Value="#FF007BFE"/>
                 <Setter Property="Content">
