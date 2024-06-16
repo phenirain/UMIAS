@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UMIASWPF.View.User.Pages"
       mc:Ignorable="d" 
+      xmlns:el="clr-namespace:UMIASWPF.View.User.UserEl"
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       d:DesignHeight="850" d:DesignWidth="1180"
       FontFamily="{DynamicResource Inter}"
@@ -26,17 +27,8 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Запись" FontSize="20"/>
-        <Grid Background="{DynamicResource SecondaryBackground}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0, 10">
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10" Padding="10" >
-                <ListBox x:Name="DoctorsList">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
-                </ListBox>
-            </ScrollViewer>
-        </Grid>
+        <el:SpecialistListElement Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+        </el:SpecialistListElement>
         <Grid Grid.Row="2" Margin="0, 10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
