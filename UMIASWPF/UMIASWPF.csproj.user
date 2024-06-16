@@ -31,6 +31,12 @@
     <Compile Update="View\Doctor\DoctorWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\User\Pages\AppointmentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\MainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\User\UserEl\AllPostsElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -47,6 +53,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\User\UserEl\SpecialistElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -78,6 +87,12 @@
     <Page Update="View\Doctor\DoctorWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\User\Pages\AppointmentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\User\UserEl\AllPostsElement.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -94,6 +109,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\UserEl\SpecialistElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
