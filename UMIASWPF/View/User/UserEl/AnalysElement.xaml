@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="UMIASWPF.View.User.UserEl.AnalyzElement"
+﻿<UserControl x:Class="UMIASWPF.View.User.UserEl.AnalysElement"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -18,7 +18,8 @@
             <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="NameOfAnalysis" Text="Определение антигена Coronavirus (SARS-CoV-2) качественно" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
-        <TextBlock x:Name="DateOfAnalysis" Text="29 декабря 2024 г." Grid.Column="1" Grid.Row="2" FontSize="12" Foreground="#807F7F" TextAlignment="Center"  VerticalAlignment="Center" />
+        <TextBlock Text="{Binding AnalyseName}" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock Text="{Binding AnalyseDate}" Grid.Column="1" Grid.Row="2" FontSize="12"
+                   Foreground="#807F7F" TextAlignment="Center"  VerticalAlignment="Center" />
     </Grid>
 </UserControl>

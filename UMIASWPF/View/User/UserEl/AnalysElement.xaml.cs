@@ -18,9 +18,10 @@ namespace UMIASWPF.View.User.UserEl
     /// <summary>
     /// Логика взаимодействия для AnalyzElement.xaml
     /// </summary>
-    public partial class AnalyzElement : UserControl
+    public partial class AnalysElement : UserControl
     {
-        public AnalyzElement()
+        
+        public AnalysElement()
         {
             InitializeComponent();
         }

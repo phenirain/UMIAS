@@ -27,14 +27,19 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="Doctor" Grid.Column="1" Grid.ColumnSpan="3"  Grid.RowSpan="3" Text="Врач общей практики (семейный врач)"
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3"  Grid.RowSpan="3" Text="{Binding Doctor}"
                    TextAlignment="Center" FontSize="12"/>
-        <TextBlock x:Name="InitialsDoctor" Grid.Column="1" Grid.Row="3" Text="Иванов Иван Иванович" Foreground="{DynamicResource SecondaryForeground}" TextAlignment="Left" FontSize="12"/>
-        <TextBlock x:Name="DateOfReceipt" Grid.Column="1"  Grid.Row="4" Text="30 мая" Foreground="{DynamicResource SecondaryForeground}" TextAlignment="Left" FontSize="12"/>
-        <TextBlock x:Name="ReceptionAddress" Grid.Column="3"  Grid.Row="2" Text="Москва, Профсоюзная улица, д. 111А" Foreground="{DynamicResource SecondaryForeground}"
+        <TextBlock  Grid.Column="1" Grid.Row="3" Text="{Binding DoctorName}"
+                   Foreground="{DynamicResource SecondaryForeground}" TextAlignment="Left" FontSize="12"/>
+        <TextBlock Grid.Column="1"  Grid.Row="4" Text="{Binding AppointmentDate}" Foreground="{DynamicResource SecondaryForeground}"
+                   TextAlignment="Left" FontSize="12"/>
+        <TextBlock Grid.Column="3"  Grid.Row="2" Text="{Binding AppointmentAddress}"
+                   Foreground="{DynamicResource SecondaryForeground}"
                    TextAlignment="Right" FontSize="12"  Grid.RowSpan="4" TextWrapping="Wrap"/>
-        <ui:Button x:Name="Postpone" Grid.Row="6" Grid.Column="1" Style="{DynamicResource FocusingButton}" Content="Перенести" VerticalContentAlignment="Center"
+        <ui:Button x:Name="Postpone" Grid.Row="6" Grid.Column="1" Style="{DynamicResource FocusingButton}"
+                   Content="Перенести" VerticalContentAlignment="Center"
                     Width="160" Height="18"/>
-        <ui:Button x:Name="Сancel" Grid.Row="6" Grid.Column="3" Style="{DynamicResource AttentionButton}" HorizontalAlignment="Center" Width="160" Height="18" Content="Отменить"/>
+        <ui:Button x:Name="Сancel" Grid.Row="6" Grid.Column="3" Style="{DynamicResource AttentionButton}"
+                   HorizontalAlignment="Center" Width="160" Height="18" Content="Отменить"/>
     </Grid>
 </UserControl>

@@ -37,25 +37,34 @@
     <Compile Update="View\User\Pages\MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\User\Pages\ProfilePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\SpecialistSelectionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\User\UserEl\AllPostsElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\User\UserEl\AnalyzElement.xaml.cs">
+    <Compile Update="View\User\UserEl\AnalysElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\User\UserEl\AppointmentElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\User\UserEl\DoctorElement.xaml.cs">
+    <Compile Update="View\User\UserEl\DateTimeItemsControlElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\User\UserEl\PhoneElement.xaml.cs">
+    <Compile Update="View\User\UserEl\DoctorElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\User\UserEl\SpecialistElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\User\UserEl\SpecialistListElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\TimeElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\User\UserWindow.xaml.cs">
@@ -96,25 +105,34 @@
     <Page Update="View\User\Pages\MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\User\Pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\SpecialistSelectionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\User\UserEl\AllPostsElement.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\User\UserEl\AnalyzElement.xaml">
+    <Page Update="View\User\UserEl\AnalysElement.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\UserEl\AppointmentElement.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\User\UserEl\DoctorElement.xaml">
+    <Page Update="View\User\UserEl\DateTimeItemsControlElement.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\User\UserEl\PhoneElement.xaml">
+    <Page Update="View\User\UserEl\DoctorElement.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\UserEl\SpecialistElement.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\UserEl\SpecialistListElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\TimeElement.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\UserWindow.xaml">

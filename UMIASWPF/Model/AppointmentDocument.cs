@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UMIASWPF.Model
 {
-    internal class AppointmentDocument
+    public class AppointmentDocument
     {
         public int? IdAppointment { get; set; }
 

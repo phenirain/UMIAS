@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using UMIASWPF.View.Authorization.Pages;
+using UMIASWPF.View.Doctor;
+using UMIASWPF.View.User;
+using UMIASWPF.ViewModel;
 
 namespace UMIASWPF.View.Authorization
 {
@@ -20,10 +23,17 @@ namespace UMIASWPF.View.Authorization
     /// </summary>
     public partial class AuthorizationWindow : Window
     {
+
+        AuthorizationViewModel _viewModel;
         public AuthorizationWindow()
         {
             InitializeComponent();
-            Start_window.Content = new DoctorAuthorizationPage();
+            _viewModel = new AuthorizationViewModel();
+            DataContext = _viewModel;
+            _viewModel.ToPatient += (_, _) => ToPatient();
+            _viewModel.ToDoctor += (_, _) => ToDoctor();
+            _viewModel.ToAdmin += (_, _) => ToAdmin();
+            Start_window.Content = new PatientAuthorizationPage(_viewModel);
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -49,6 +59,24 @@ namespace UMIASWPF.View.Authorization
             WindowState = WindowState.Minimized;
         }
 
+        private void ToAdmin()
+        {
+            Close();
+        }
+
+        private void ToDoctor()
+        {
+            DoctorWindow window = new DoctorWindow();
+            window.Show();
+            Close();
+        }
+
+        private void ToPatient()
+        {
+            UserWindow window = new UserWindow();
+            window.Show();
+            Close();
+        }
 
     }
 }

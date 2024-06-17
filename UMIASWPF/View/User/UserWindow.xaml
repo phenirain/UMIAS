@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UMIASWPF.View.User"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         mc:Ignorable="d"
-        Title="UserWindow" Height="850" Width="1500" WindowStyle="None" AllowsTransparency="True"
+        Title="UserWindow" Height="850" Width="1500"
         MouseLeftButtonDown="MoveWindow" FontFamily="{DynamicResource Inter}">
     
     <WindowChrome.WindowChrome>
@@ -17,7 +17,7 @@
             CornerRadius="0"/>
     </WindowChrome.WindowChrome>
 
-    <Grid>
+    <Grid Background="{DynamicResource PrimaryBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="15"/>
             <RowDefinition Height="26"/>
@@ -28,16 +28,16 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15"/>
-            <ColumnDefinition Width="156.667"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="156.667*"/>
             <ColumnDefinition Width="71*"/>
-            <ColumnDefinition Width="36.187"/>
-            <ColumnDefinition Width="26"/>
-            <ColumnDefinition Width="16"/>
-            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="36.187*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="30*"/>
             <ColumnDefinition Width="1082*"/>
-            <ColumnDefinition Width="89"/>
-            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Column="8" Grid.Row="1" Panel.ZIndex="1">
@@ -49,8 +49,8 @@ Background="Transparent" BorderBrush="{x:Null}"  Grid.Column="1" Click="UnwrapBu
 Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseButton_Click"/>
         </StackPanel>
         
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Grid.RowSpan="5" Grid.Column="7" Grid.ColumnSpan="2"> 
-            <Frame x:Name="Frame"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Grid.RowSpan="5" Grid.Column="7" Grid.ColumnSpan="2">
+            <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>
         </ScrollViewer>
 
 
@@ -80,18 +80,8 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
                 <TreeViewItem Header="Исследования"  Foreground="#FFF"/>
             </TreeViewItem>
         </TreeView>
-        <ui:Button Style="{DynamicResource ButtonBar}" Grid.Column="4" Grid.Row="5" Click="Settings_Click" Height="26" VerticalAlignment="Top">
-            <Image Source="../../Images/Settings.png" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="2" ScaleY="2"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </ui:Button>
+        <Button Style="{StaticResource SettingsStyle}" BorderBrush="{x:Null}" Foreground="#FFF" Grid.Column="4" Grid.Row="5" Click="Settings_Click" Height="26" VerticalAlignment="Top">
+        </Button>
         <TextBlock Foreground="#FFF" Grid.Row="5" Grid.Column="1" Text="Полис ОМС:" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="16" />
     </Grid>
 </Window>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UMIASWPF.Model
 {
-    internal class Speciality
+    public class Speciality
     {
         public int? IdSpeciality { get; set; }
 

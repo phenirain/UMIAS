@@ -24,6 +24,6 @@
         </Grid.ColumnDefinitions>
 
         <Image x:Name="UserImage" Grid.Column="2" Grid.Row="1"/>
-        <TextBlock Text="Офтальмолог" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" FontSize="16" TextAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="{Binding Doctor}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" FontSize="16" TextAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>

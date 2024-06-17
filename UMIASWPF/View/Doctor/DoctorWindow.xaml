@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UMIASWPF.View.Doctor"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         mc:Ignorable="d"
-        Title="DoctorWindow" Height="1500" Width="1530" WindowStyle="None" AllowsTransparency="True"
+        Title="DoctorWindow" Height="1500" Width="1530"
         MouseLeftButtonDown="MoveWindow" FontFamily="{DynamicResource Inter}">
     <WindowChrome.WindowChrome>
         <WindowChrome
