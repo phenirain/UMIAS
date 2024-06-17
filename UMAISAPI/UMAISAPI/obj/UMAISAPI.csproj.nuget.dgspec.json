@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop\\College\\Programming\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj": {}
+    "d:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj": {}
   },
   "projects": {
-    "D:\\Desktop\\College\\Programming\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj": {
+    "d:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\College\\Programming\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
+        "projectUniqueName": "d:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
         "projectName": "UMAISAPI",
-        "projectPath": "D:\\Desktop\\College\\Programming\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
-        "packagesPath": "C:\\Users\\rus06\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\College\\Programming\\UMAISAPI\\UMAISAPI\\obj\\",
+        "projectPath": "d:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
+        "packagesPath": "C:\\Users\\Eliza\\.nuget\\packages\\",
+        "outputPath": "d:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rus06\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Eliza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -92,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
