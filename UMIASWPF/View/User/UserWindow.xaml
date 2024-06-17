@@ -17,7 +17,7 @@
             CornerRadius="0"/>
     </WindowChrome.WindowChrome>
 
-    <Grid>
+    <Grid Background="{DynamicResource PrimaryBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="15"/>
             <RowDefinition Height="26"/>
@@ -49,8 +49,8 @@ Background="Transparent" BorderBrush="{x:Null}"  Grid.Column="1" Click="UnwrapBu
 Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseButton_Click"/>
         </StackPanel>
         
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Grid.RowSpan="5" Grid.Column="7" Grid.ColumnSpan="2"> 
-            <Frame x:Name="Frame"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Grid.RowSpan="5" Grid.Column="7" Grid.ColumnSpan="2">
+            <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>
         </ScrollViewer>
 
 
@@ -80,18 +80,8 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
                 <TreeViewItem Header="Исследования"  Foreground="#FFF"/>
             </TreeViewItem>
         </TreeView>
-        <ui:Button Style="{DynamicResource ButtonBar}" Grid.Column="4" Grid.Row="5" Click="Settings_Click" Height="26" VerticalAlignment="Top">
-            <Image Source="../../Images/Settings.png" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="2" ScaleY="2"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </ui:Button>
+        <Button Style="{StaticResource SettingsStyle}" BorderBrush="{x:Null}" Foreground="#FFF" Grid.Column="4" Grid.Row="5" Click="Settings_Click" Height="26" VerticalAlignment="Top">
+        </Button>
         <TextBlock Foreground="#FFF" Grid.Row="5" Grid.Column="1" Text="Полис ОМС:" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="16" />
     </Grid>
 </Window>

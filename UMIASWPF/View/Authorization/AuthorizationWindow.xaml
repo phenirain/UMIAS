@@ -41,6 +41,6 @@
                 Grid.Column="3" Grid.Row="1" Click="UnwrapButton_Click"/>
         <Button Style="{StaticResource CloseButtonStyle}" Foreground="White" BorderBrush="{x:Null}" 
                 Grid.Row="1" Grid.Column="4" Click="CloseButton_Click"/>
-        <Frame x:Name="Start_window" Grid.ColumnSpan="5" Grid.Row="4"/>
+        <Frame x:Name="Start_window" Grid.ColumnSpan="5" Grid.Row="4" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

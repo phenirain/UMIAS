@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UMIASWPF.Model;
 
 namespace UMIASWPF.View.User.UserEl
 {
@@ -20,9 +22,15 @@ namespace UMIASWPF.View.User.UserEl
     /// </summary>
     public partial class AllPostsElement : UserControl
     {
-        public AllPostsElement()
+        public string ActiveMonth;
+        public ObservableCollection<Appointment> MonthAppointments;
+
+        public AllPostsElement(string ActiveMonth, ObservableCollection<Appointment> appointments)
         {
             InitializeComponent();
+            this.ActiveMonth = ActiveMonth;
+            this.MonthAppointments = appointments;
+            if (MonthAppointments.Count == 0) NoOne.Visibility = Visibility.Visible;
         }
     }
 }

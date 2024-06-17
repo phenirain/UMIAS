@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace UMIASWPF.View.User.UserEl
+namespace UMIASWPF.View.User.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AnalyzElement.xaml
+    /// Логика взаимодействия для SpecialistSelectionPage.xaml
     /// </summary>
-    public partial class AnalyzElement : UserControl
+    public partial class SpecialistSelectionPage : Page
     {
-        public AnalyzElement()
+        public SpecialistSelectionPage()
         {
             InitializeComponent();
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UMIASWPF.Model
 {
-    internal class Patient
+    public class Patient
     {
         public long? Oms { get; set; }
 

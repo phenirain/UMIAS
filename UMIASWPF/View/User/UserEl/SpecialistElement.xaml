@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UMIASWPF.View.User.UserEl"
              mc:Ignorable="d" 
-             d:DesignHeight="60" d:DesignWidth="350">
-    <Grid  Background="{DynamicResource PrimaryBackground}">
+             d:DesignHeight="80" d:DesignWidth="370">
+    <Grid  Background="{DynamicResource PrimaryBackground}" Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="6*"/>
             <RowDefinition Height="18*"/>

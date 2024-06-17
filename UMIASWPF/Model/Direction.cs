@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UMIASWPF.Model
 {
-    internal class Direction
+    public class Direction
     {
         public int? IdDirection { get; set; }
 

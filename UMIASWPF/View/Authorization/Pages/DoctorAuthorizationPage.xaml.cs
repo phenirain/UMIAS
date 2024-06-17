@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UMIASWPF.ViewModel;
 
 namespace UMIASWPF.View.Authorization.Pages
 {
@@ -20,9 +21,20 @@ namespace UMIASWPF.View.Authorization.Pages
     /// </summary>
     public partial class DoctorAuthorizationPage : Page
     {
-        public DoctorAuthorizationPage()
+        AuthorizationViewModel _viewModel;
+        public DoctorAuthorizationPage(AuthorizationViewModel viewModel)
         {
             InitializeComponent();
+            _viewModel = viewModel;
+            DataContext = _viewModel;
+        }
+
+        private void ToPatientPage(object sender, EventArgs e)
+        {
+            if (Window.GetWindow(this) is AuthorizationWindow window)
+            {
+                window.Start_window.Content = new PatientAuthorizationPage(_viewModel);
+            }
         }
     }
 }

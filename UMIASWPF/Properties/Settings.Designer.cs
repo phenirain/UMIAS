@@ -34,5 +34,41 @@ namespace UMIASWPF.Properties {
                 this["CurrentTheme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public long Patient {
+            get {
+                return ((long)(this["Patient"]));
+            }
+            set {
+                this["Patient"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Admin {
+            get {
+                return ((int)(this["Admin"]));
+            }
+            set {
+                this["Admin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Doctor {
+            get {
+                return ((int)(this["Doctor"]));
+            }
+            set {
+                this["Doctor"] = value;
+            }
+        }
     }
 }
