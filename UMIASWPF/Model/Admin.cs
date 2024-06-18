@@ -3,6 +3,10 @@ namespace UMIASWPF.Model
 {
     public class Admin
     {
+        public Admin()
+        {
+
+        }
         public int? IdAdmin { get; set; }
 
         public string SurnameAdmin { get; set; } = null!;
