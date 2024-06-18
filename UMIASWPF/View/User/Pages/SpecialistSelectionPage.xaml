@@ -47,7 +47,6 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <TextBlock Text="Иванов Иван Иванович" FontSize="20" Margin="0, 0, 0, 15" Grid.Row="0"/>
-            <el:DateTimeItemsControlElement Grid.Row="1"/>
         </Grid>
     </Grid>
 </Page>
