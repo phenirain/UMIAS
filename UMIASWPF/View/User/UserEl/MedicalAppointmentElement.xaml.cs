@@ -16,12 +16,12 @@ using System.Windows.Shapes;
 namespace UMIASWPF.View.User.UserEl
 {
     /// <summary>
-    /// Логика взаимодействия для AppointmentElement.xaml
+    /// Логика взаимодействия для MedicalAppointmentElement.xaml
     /// </summary>
-    public partial class AppointmentElement : UserControl
+    public partial class MedicalAppointmentElement : UserControl
     {
-        public string NameDoctor { get; set; }
-        public string FIO { get; set; }
+        public string NameAppointment { get; set; }
+        public string NameDoctor { get; set; } 
         public string Day { get; set; }
         public string Address { get; set; }
 
@@ -30,14 +30,13 @@ namespace UMIASWPF.View.User.UserEl
         public int IdAppointment;
 
         public event EventHandler Move;
-        public event EventHandler Delete;
 
-        public AppointmentElement(string nameDoctor, string fio, string day, string address, int idDoctor, int idAppointment)
+        public MedicalAppointmentElement(string nameDoctor, string nameappointment, string day, string address, int idDoctor, int idAppointment)
         {
             InitializeComponent();
             DataContext = this;
             NameDoctor = nameDoctor;
-            FIO = fio;
+            NameAppointment = nameappointment;
             Day = day;
             Address = address;
             IdAppointment = idAppointment;
@@ -47,11 +46,6 @@ namespace UMIASWPF.View.User.UserEl
         private void MoveClick(object sender, RoutedEventArgs e)
         {
             Move(this, EventArgs.Empty);
-        }
-
-        private void DeleteClick(object sender, RoutedEventArgs e)
-        {
-            Delete(this, EventArgs.Empty);
         }
     }
 }

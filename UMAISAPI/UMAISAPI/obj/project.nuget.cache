@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NBwgGd9wyRgwfiIPvIaAgDN+09w8S0inoWJbEEmo4/XlgTTq7IDP7w9Snkp+FMykpM+/2ooC9vqYAemUqMiEwQ==",
+  "dgSpecHash": "biE8O5FU7LMsGYNYr9BIqwhmTdJRFL1iHkUVGlYqrHJfzW3xTuH/0VsrXTJaICte4hNP3NpZQQSR3Mv54TIqPQ==",
   "success": true,
-  "projectFilePath": "d:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
+  "projectFilePath": "D:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eliza\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Eliza\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

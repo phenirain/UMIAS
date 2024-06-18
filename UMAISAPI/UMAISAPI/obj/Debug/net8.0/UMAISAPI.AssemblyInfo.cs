@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UMAISAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4ad759efb9054ff29f6c6ca07f87192bda3a44e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b43edec44a5ba06615b1d5e1f697e4ce281fe6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("UMAISAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UMAISAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

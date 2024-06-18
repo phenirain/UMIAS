@@ -20,9 +20,14 @@ namespace UMIASWPF.View.User.Pages
     /// </summary>
     public partial class MedicalAppointmentsCardPage : Page
     {
+        private AppointmentViewModel _viewModel; 
+
         public MedicalAppointmentsCardPage()
         {
             InitializeComponent();
+            _viewModel = new MedicalAppointmentViewModel();
+            DataContext = _viewModel;
+            RTB.Document = _viewModel.RTB;
         }
     }
 }

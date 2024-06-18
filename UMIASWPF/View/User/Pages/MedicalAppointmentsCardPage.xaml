@@ -5,10 +5,51 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UMIASWPF.View.User.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:el="clr-namespace:UMIASWPF.View.User.UserEl"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      d:DesignHeight="850" d:DesignWidth="1180"
+      FontFamily="{DynamicResource Inter}"
       Title="MedicalAppointmentsCardPage">
 
-    <Grid>
-        
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Приёмы" FontSize="20"/>
+        <Grid Grid.Column="0" Grid.Row="1" Background="{DynamicResource SecondaryBackground}">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Background="#FFF">
+                <ListBox ItemsSource="{Binding Appointments}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Осмотр травматолога-ортопеда" FontSize="20" Grid.Row="1"/>
+            <TextBlock Text="Врач:" FontSize="14" Grid.Row="2" HorizontalAlignment="Left"/>
+            <TextBlock Text="Москва, Каширское ш. д. 62" FontSize="14" Grid.Row="2" HorizontalAlignment="Right"/>
+
+            <TextBlock Text="Сударева Е.Ю." FontSize="14" Grid.Row="3" HorizontalAlignment="Left" Width="131"/>
+            <TextBlock Text="12 декабря 2022 г." FontSize="14" Grid.Row="3" HorizontalAlignment="Right"/>
+
+            <RichTextBox Grid.Row="4"/>
+        </Grid>
     </Grid>
 </Page>

@@ -33,7 +33,6 @@ namespace UMIASWPF.View.User
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-
             Close();
         }
 
@@ -50,10 +49,9 @@ namespace UMIASWPF.View.User
             WindowState = WindowState.Minimized;
         }
 
-        private void Settings_Click(object sender, RoutedEventArgs e)
+        private void MedicalCard_Click(object sender, MouseButtonEventArgs e)
         {
-
+            Frame.Content = new MedicalAppointmentsCardPage();
         }
-
     }
 }
