@@ -1,8 +1,12 @@
-﻿using System.IO.Compression;
+﻿using System.Collections.ObjectModel;
+using System.IO.Compression;
 using System.Linq.Expressions;
+using System.Windows;
 using System.Windows.Controls;
 using UMIASWPF.Model;
 using UMIASWPF.Utilities;
+using UMIASWPF.View.User;
+using UMIASWPF.View.User.Pages;
 using UMIASWPF.View.User.UserEl;
 
 namespace UMIASWPF.ViewModel.PatientViewModels
@@ -52,22 +56,22 @@ namespace UMIASWPF.ViewModel.PatientViewModels
 
         #endregion
         #region collections
-        private List<DoctorElement> _Doctors;
-        public List<DoctorElement> Doctors
+        private ObservableCollection<DoctorElement> _Doctors;
+        public ObservableCollection<DoctorElement> Doctors
         {
             get => _Doctors;
             set => SetField(ref _Doctors, value);
         }
 
-        private List<AllPostsElement> _CurrentAppointment;
-        public List<AllPostsElement> CurrentAppointments
+        private ObservableCollection<AllPostsElement> _CurrentAppointment;
+        public ObservableCollection<AllPostsElement> CurrentAppointments
         {
             get => _CurrentAppointment;
             set => SetField(ref _CurrentAppointment, value);
         }
 
-        private List<AllPostsElement> _ArchiveAppointments;
-        public List<AllPostsElement> ArchiveAppointments
+        private ObservableCollection<AllPostsElement> _ArchiveAppointments;
+        public ObservableCollection<AllPostsElement> ArchiveAppointments
         {
             get => _ArchiveAppointments;
             set => SetField(ref _ArchiveAppointments, value);
@@ -77,9 +81,9 @@ namespace UMIASWPF.ViewModel.PatientViewModels
 
         public MainPageViewModel()
         {
-            CurrentAppointments = new List<AllPostsElement>();
-            ArchiveAppointments = new List<AllPostsElement>();
-            Doctors = new List<DoctorElement>();
+            CurrentAppointments = new ObservableCollection<AllPostsElement>();
+            ArchiveAppointments = new ObservableCollection<AllPostsElement>();
+            Doctors = new ObservableCollection<DoctorElement>();
             getDoctors();
             getCurrentAppointments();
             getArchiveAppointments();
@@ -88,8 +92,10 @@ namespace UMIASWPF.ViewModel.PatientViewModels
         private void getDoctors()
         {
             List<Speciality>? specialities = Get<List<Speciality>>("Specialities");
-            Doctors.AddRange(from speciality in specialities
-                             select new DoctorElement(speciality.NumberImage, speciality.NameSpecialities));
+            foreach(var speciality in specialities)
+            {
+                Doctors.Add(new DoctorElement(speciality.NumberImage, speciality.NameSpecialities));
+            }
         }
 
         private void getCurrentAppointments()
@@ -99,19 +105,19 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             DateOnly currentTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(2));
             if (CurrentFrom == null && CurrentTo == null)
             {
-                CurrentFrom = DateTime.Now.Date.ToString();
-                CurrentTo = DateTime.Now.AddMonths(2).Date.ToString();
+                CurrentFrom = DateOnly.FromDateTime(DateTime.Now.Date).ToString();
+                CurrentTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(2).Date).ToString();
                 currentFrom = DateOnly.FromDateTime(DateTime.Now);
                 currentTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(2));
             } 
             else if (CurrentFrom == null)
             {
-                CurrentFrom = DateTime.Now.Date.ToString();
+                CurrentFrom = DateOnly.FromDateTime(DateTime.Now.Date).ToString();
                 currentFrom = DateOnly.FromDateTime(DateTime.Now);
             } 
             else if (CurrentTo == null)
             {
-                CurrentTo = DateTime.Now.AddMonths(2).Date.ToString();
+                CurrentTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(2).Date).ToString();
                 currentTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(2));
             }
             else
@@ -123,6 +129,7 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             && x.AppointmentDate.Month <= currentTo.Month).OrderBy(x => x.AppointmentDate.Month)
                 .GroupBy(x => x.AppointmentDate.Month).ToDictionary(x => x.Key, x => x.ToList()).ToList();
             int currentCount = current?.Count < 3 ? 3 : current.Count;
+            CurrentAppointments.Clear();
             for (int i = 0; i < currentCount; i++)
             {
                 AllPostsElement post;
@@ -164,6 +171,7 @@ namespace UMIASWPF.ViewModel.PatientViewModels
                 .ToList()
                 .GroupBy(x => x.AppointmentDate.Month).ToDictionary(x => x.Key, x => x.ToList()).ToList();
             int archiveCount = archive?.Count < 3 ? 3 : archive.Count;
+            ArchiveAppointments.Clear();
             for (int i = 0; i < archiveCount;i++)
             {
                 AllPostsElement post;
@@ -216,14 +224,12 @@ namespace UMIASWPF.ViewModel.PatientViewModels
 
         private void MoveAppointment(object sender, EventArgs args)
         {
-
+            Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault()!.Frame.Content = new SpecialistSelectionPage();
         }
 
         private void RepeatAppointment(object sender, EventArgs args)
         {
-            if (sender is AppointmentElement appointment)
-            {
-            }
+            Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault()!.Frame.Content = new SpecialistSelectionPage();
         }
 
         public void SelectedDateCurrentFrom(object? sender, SelectionChangedEventArgs e)
