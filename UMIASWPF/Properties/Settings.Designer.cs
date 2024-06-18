@@ -11,11 +11,8 @@
 namespace UMIASWPF.Properties {
     
     
-<<<<<<< HEAD:UMIASApp/Properties/Settings.Designer.cs
-=======
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.10.0.0")]
->>>>>>> d4ad759efb9054ff29f6c6ca07f87192bda3a44e:UMIASWPF/Properties/Settings.Designer.cs
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
