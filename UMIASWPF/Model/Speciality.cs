@@ -7,6 +7,6 @@ namespace UMIASWPF.Model
 
         public string NameSpecialities { get; set; } = null!;
 
-        public string NumberImage { get; set; } = null!;
+        public int NumberImage { get; set; }
     }
 }

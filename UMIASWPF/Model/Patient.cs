@@ -1,9 +1,11 @@
 ﻿
+using BingingLibrary;
+
 namespace UMIASWPF.Model
 {
-    public class Patient
+    public class Patient: BindingHelper
     {
-        public long? Oms { get; set; }
+        public long Oms { get; set; }
 
         public string Surname { get; set; } = null!;
 
@@ -15,7 +17,13 @@ namespace UMIASWPF.Model
 
         public string AddressPatient { get; set; } = null!;
 
-        public string? LivingAddress { get; set; }
+        private string? _livingAddress;
+
+        public string? LivingAddress
+        {
+            get => _livingAddress;
+            set => SetField(ref _livingAddress, value);
+        }
 
         public string? Phone { get; set; }
 
