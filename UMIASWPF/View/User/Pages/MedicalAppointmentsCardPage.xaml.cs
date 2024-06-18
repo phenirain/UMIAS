@@ -12,17 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UMIASWPF.ViewModel.PatientViewModels;
 
-namespace UMIASWPF.View.User.UserEl
+namespace UMIASWPF.View.User.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AppointmentElement.xaml
+    /// Логика взаимодействия для MedicalAppointmentsCardPage.xaml
     /// </summary>
-    public partial class AppointmentElement : UserControl
+    public partial class MedicalAppointmentsCardPage : Page
     {
-        public AppointmentElement()
+        private MedicalAppointmentViewModel _viewModel; 
+
+        public MedicalAppointmentsCardPage()
         {
             InitializeComponent();
+            _viewModel = new MedicalAppointmentViewModel();
+            DataContext = _viewModel;
+            //RTB.Document = _viewModel.RTB;
         }
     }
 }

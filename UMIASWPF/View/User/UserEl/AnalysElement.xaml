@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:UMIASWPF.View.User.UserEl"
              mc:Ignorable="d" 
              d:DesignHeight="60" d:DesignWidth="350">
+    
     <Grid Background="{DynamicResource PrimaryBackground}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6*"/>
