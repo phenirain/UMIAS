@@ -24,7 +24,7 @@
             <ColumnDefinition Width="343*"/>
         </Grid.ColumnDefinitions>
         <TextBlock FontSize="20" Margin="0,0,0,10"><Run Language="ru-ru" Text="Анализы"/></TextBlock>
-        <Grid Grid.Column="0" Grid.Row="1" Background="{DynamicResource SecondaryBackground}">
+        <Grid Grid.RowSpan="3" Grid.Row="1" Background="{DynamicResource SecondaryBackground}">
             <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Background="#FFF">
                 <ListBox>
                     <ListBox.ItemsPanel>
