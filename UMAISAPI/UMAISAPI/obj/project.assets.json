@@ -8261,9 +8261,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
+      "projectUniqueName": "D:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
       "projectName": "UMAISAPI",
-      "projectPath": "d:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
+      "projectPath": "D:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\UMAISAPI.csproj",
       "packagesPath": "C:\\Users\\Eliza\\.nuget\\packages\\",
       "outputPath": "d:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\obj\\",
       "projectStyle": "PackageReference",

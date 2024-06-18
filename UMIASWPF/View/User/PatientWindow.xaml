@@ -49,11 +49,10 @@ Background="Transparent" BorderBrush="{x:Null}"  Grid.Column="1" Click="UnwrapBu
             <Button Style="{StaticResource CloseButtonStyle}" Foreground="{DynamicResource PrimaryForeground}"
 Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseButton_Click"/>
         </StackPanel>
-        
+
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Grid.RowSpan="5" Grid.Column="7" Grid.ColumnSpan="2">
             <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>
         </ScrollViewer>
-
 
         <Border BorderBrush="#FF007BFE" Background="#FF007BFE" BorderThickness="1" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7" Grid.ColumnSpan="6"/>
 
@@ -66,7 +65,6 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
 
 
 
-
         <Border Grid.Column="0" Background="#007BFE" Grid.ColumnSpan="6"/>
 
         <TreeView Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="4" SelectedItemChanged="TreeHandler">
@@ -76,12 +74,12 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
                 <TreeViewItem Header="Диспансеризация"  Foreground="#FFF"/>
             </TreeViewItem>
             <TreeViewItem Header="Медкарта" Foreground="#FFF">
-                <TreeViewItem Header="Приёмы" Foreground="#FFF" />
-                <TreeViewItem Header="Анализы" Foreground="#FFF" />
+                <TreeViewItem Header="Приёмы" Foreground="#FFF" MouseUp="MedicalCard_Click"/>
+                <TreeViewItem Header="Анализы" Foreground="#FFF"/>
                 <TreeViewItem Header="Исследования"  Foreground="#FFF"/>
             </TreeViewItem>
         </TreeView>
-        <Button Style="{StaticResource SettingsStyle}" BorderBrush="{x:Null}" Foreground="#FFF" Grid.Column="4" Grid.Row="5" Click="Settings_Click" Height="26" VerticalAlignment="Top">
+        <Button Style="{StaticResource SettingsStyle}" BorderBrush="{x:Null}" Foreground="#FFF" Grid.Column="4" Grid.Row="5"  Height="26" VerticalAlignment="Top">
         </Button>
         <TextBlock Foreground="#FFF" Grid.Row="5" Grid.Column="1" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="16">
             <Run Text="Полис ОМС: "/>
