@@ -3,7 +3,7 @@ namespace UMIASWPF.Model
 {
     public class DoctorModel
     {
-        public int? IdDoctor { get; set; }
+        public int IdDoctor { get; set; }
 
         public string Surname { get; set; } = null!;
 

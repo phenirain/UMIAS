@@ -29,7 +29,7 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Запись" FontSize="20"/>
         <Grid Background="{DynamicResource SecondaryBackground}" Margin="0, 10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10" Padding="10">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10">
                 <ListBox ItemsSource="{Binding Doctors}">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
