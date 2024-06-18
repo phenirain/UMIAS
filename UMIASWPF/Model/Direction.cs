@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace UMIASWPF.Model
 {
     public class Direction
@@ -13,5 +8,13 @@ namespace UMIASWPF.Model
         public int? SpecialityId { get; set; }
 
         public long? Oms { get; set; }
+
+        public Direction(int specialityId, long oms)
+        {
+            SpecialityId = specialityId;
+            Oms = oms;
+        }
+
+        public Direction() { }
     }
 }

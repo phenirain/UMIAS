@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace UMIASWPF.Model
 {
     public class Speciality
@@ -12,6 +7,6 @@ namespace UMIASWPF.Model
 
         public string NameSpecialities { get; set; } = null!;
 
-        public string PathImage { get; set; } = null!;
+        public int NumberImage { get; set; }
     }
 }

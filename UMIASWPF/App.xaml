@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:UMIASWPF"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+<<<<<<< HEAD
              StartupUri="View/Doctor/DoctorWindow.xaml">
+=======
+             StartupUri="View/User/PatientWindow.xaml">
+>>>>>>> a7b543c0a2fc321d1c0c4ce5f4990db2d6b8a92f
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -83,6 +87,15 @@
                         <ui:SymbolIcon Symbol="Delete20"/>
                     </Setter.Value>
                 </Setter>
+            </Style>
+
+            <Style x:Key="ClearButton" TargetType="Button">
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
             </Style>
 
 
