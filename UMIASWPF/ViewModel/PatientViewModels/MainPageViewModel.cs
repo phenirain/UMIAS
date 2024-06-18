@@ -13,28 +13,44 @@ namespace UMIASWPF.ViewModel.PatientViewModels
         public string CurrentFrom
         {
             get => _CurrentFrom;
-            set => SetField(ref _CurrentFrom, value);
+            set
+            {
+                SetField(ref _CurrentFrom, value);
+                getCurrentAppointments();
+            }
         }
 
         private string _CurrentTo;
         public string CurrentTo
         {
             get => _CurrentTo;
-            set => SetField(ref _CurrentTo, value);
+            set
+            {
+                SetField(ref _CurrentTo, value);
+                getCurrentAppointments();
+            }
         }
 
         private string _ArchiveFrom;
         public string ArchiveFrom
         {
             get => _ArchiveFrom; 
-            set => SetField(ref _ArchiveFrom, value);
+            set
+            {
+                SetField(ref _ArchiveFrom, value);
+                getArchiveAppointments();
+            }
         }
 
         private string _ArchiveTo;
         public string ArchiveTo
         {
             get => _ArchiveFrom;
-            set => SetField(ref _ArchiveFrom, value);
+            set
+            {
+                SetField(ref _ArchiveFrom, value);
+                getArchiveAppointments();
+            }
         }
 
         #endregion
@@ -82,13 +98,23 @@ namespace UMIASWPF.ViewModel.PatientViewModels
         private void getCurrentAppointments()
         {
             List<Appointment>? appointments = Get<List<Appointment>>("Appointments");
-            DateOnly currentFrom;
-            DateOnly currentTo;
-            if (CurrentFrom == null || CurrentTo == null)
+            DateOnly currentFrom = DateOnly.FromDateTime(DateTime.Now);
+            DateOnly currentTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(2));
+            if (CurrentFrom == null && CurrentTo == null)
             {
                 CurrentFrom = DateTime.Now.Date.ToString();
                 CurrentTo = DateTime.Now.AddMonths(2).Date.ToString();
                 currentFrom = DateOnly.FromDateTime(DateTime.Now);
+                currentTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(2));
+            } 
+            else if (CurrentFrom == null)
+            {
+                CurrentFrom = DateTime.Now.Date.ToString();
+                currentFrom = DateOnly.FromDateTime(DateTime.Now);
+            } 
+            else if (CurrentTo == null)
+            {
+                CurrentTo = DateTime.Now.AddMonths(2).Date.ToString();
                 currentTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(2));
             }
             else
@@ -115,15 +141,23 @@ namespace UMIASWPF.ViewModel.PatientViewModels
         private void getArchiveAppointments()
         {
             List<Appointment>? appointments = Get<List<Appointment>>("Appointments");
-            DateOnly archiveFrom;
-            DateOnly archiveTo;
-            if (ArchiveFrom == null || ArchiveTo == null)
+            DateOnly archiveFrom = DateOnly.FromDateTime(DateTime.Now.AddMonths(-4));
+            DateOnly archiveTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1));
+            if (ArchiveFrom == null && ArchiveTo == null)
             {
                 ArchiveFrom = DateTime.Now.AddMonths(-4).Date.ToString();
                 ArchiveTo = DateTime.Now.AddMonths(-1).Date.ToString();
-                archiveFrom = DateOnly.FromDateTime(DateTime.Now.AddMonths(-4));
-                archiveTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1));
             } 
+            else if (ArchiveFrom == null)
+            {
+                ArchiveFrom = DateTime.Now.AddMonths(-4).Date.ToString();
+                archiveFrom = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1));
+            }
+            else if (ArchiveTo == null)
+            {
+                ArchiveTo = DateTime.Now.AddMonths(-1).Date.ToString();
+                archiveTo = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1));
+            }
             else
             {
                 DateOnly.TryParse(ArchiveTo, out archiveTo);
