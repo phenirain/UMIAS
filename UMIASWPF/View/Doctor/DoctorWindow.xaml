@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:UMIASWPF.View.Doctor"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         mc:Ignorable="d"
-        Title="DoctorWindow" Height="1500" Width="1530"
+        MinHeight="718" MinWidth="472"
+        Title="DoctorWindow" Height="850" Width="1400"
         MouseLeftButtonDown="MoveWindow" FontFamily="{DynamicResource Inter}">
     <WindowChrome.WindowChrome>
         <WindowChrome
@@ -17,71 +18,61 @@
     </WindowChrome.WindowChrome>
     <Grid Background="{DynamicResource PrimaryBackground}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="47*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="33*"/>
-
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="44*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="52*"/>
-
-            <RowDefinition Height="25*"/>
-
-            <RowDefinition Height="33*"/>
-
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="52*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="52*"/>
-
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="52*"/>
-
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="28*"/>
-
-            <RowDefinition Height="21*"/>
-            <RowDefinition Height="338*"/>
-            <RowDefinition Height="21*"/>
-
-            <RowDefinition Height="437*"/>
-            <RowDefinition Height="29*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="29*"/>
-            <RowDefinition Height="10*"/>
-
+            <RowDefinition />
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="500*"/>
+            <RowDefinition Height="270*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="381*"/>
-            <ColumnDefinition Width="53*"/>
-            <ColumnDefinition Width="321*"/>
-            <ColumnDefinition Width="339*"/>
-            <ColumnDefinition Width="339*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="190*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="700*"/>
             <ColumnDefinition Width="29*"/>
             <ColumnDefinition Width="29*"/>
             <ColumnDefinition Width="29*"/>
             <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
-        <Border Background="#007BFE" Grid.ColumnSpan="9"/>
-        <TextBlock Text="ЕМИАС — Васильев Георгий Игнатьевич" Grid.Column="0" Foreground="#FFFFFF" FontSize="18" Grid.ColumnSpan="2" FontWeight="Bold" TextAlignment="Left" VerticalAlignment="Center" Height="27" Padding="10, 0, 0, 0"/>
-        <Button Style="{StaticResource MoonStyle}" BorderBrush="{x:Null}" Grid.Column="1" Click="SwitchTheme" Foreground="White"/>
-        <Border Grid.Column="5" Grid.ColumnSpan="3">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                
-                <Button Style="{StaticResource MinimizeButtonStyle}" Foreground="White"  BorderBrush="{x:Null}"  Grid.Column="0" Click="RollUpButton_Click"/>
-                <Button Style="{StaticResource ToRollButtonStyle}"  Foreground="White" BorderBrush="{x:Null}"  Grid.Column="1" Click="UnwrapButton_Click"/>
-                <Button Style="{StaticResource CloseButtonStyle}" Foreground="White"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseButton_Click"/>
-            </Grid>
-        </Border>
 
-        <Grid Grid.Row="1" Grid.Column="0" Grid.RowSpan="17" Background="{DynamicResource SecondaryBackground}">
+        <Grid Grid.Row="0" Grid.ColumnSpan="8" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="35*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="17*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="978*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Border Background="#007BFE" Grid.RowSpan="2" Grid.ColumnSpan="8"/>
+            <TextBlock Text="ЕМИАС — Васильев Георгий Игнатьевич" Grid.Column="2" Grid.Row="1" Foreground="#FFFFFF"  FontWeight="Bold" VerticalAlignment="Center"/>
+            <Button Style="{StaticResource MoonStyle}" BorderBrush="{x:Null}" Grid.Column="3" Click="SwitchTheme" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="22" Grid.Row="1"/>
+            <Border Grid.Column="4" Grid.ColumnSpan="3" Grid.RowSpan="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Style="{StaticResource MinimizeButtonStyle}" Foreground="White"  BorderBrush="{x:Null}"  Grid.Column="0" Click="RollUpButton_Click"/>
+                    <Button Style="{StaticResource ToRollButtonStyle}"  Foreground="White" BorderBrush="{x:Null}"  Grid.Column="1" Click="UnwrapButton_Click"/>
+                    <Button Style="{StaticResource CloseButtonStyle}" Foreground="White"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseButton_Click"/>
+                </Grid>
+            </Border>
+            <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Background="{DynamicResource SecondaryBackground}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10*"/>
                 <ColumnDefinition Width="350*"/>
@@ -100,47 +91,95 @@
             <Button Content="Выйти из аккаунта" Grid.Column="1" Grid.Row="5" Foreground="#FFF" Background="{DynamicResource Attention}" HorizontalAlignment="Stretch" FontSize="16" Height="30" Margin="10"/>
         </Grid>
 
-        <TextBlock Text="Пациент: Иванова Ирина Ивановна" FontSize="15" Grid.Column="1" Grid.Row="1"  Grid.ColumnSpan="2" HorizontalAlignment="Left"/>
 
-        <TextBlock Text="Номер полиса: 7777 0000 0000 0000" FontSize="15" Grid.Column="4"  Grid.Row="1"  Grid.ColumnSpan="4" HorizontalAlignment="Right"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="300*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Прием:" FontSize="12" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"  HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="15*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="29*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="29*"/>
+                    <RowDefinition Height="22*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="14*"/>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="41*"/>
+                    <RowDefinition Height="161*"/>
+                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="182*"/>
+                    <RowDefinition Height="26*"/>
+                    <RowDefinition Height="11*"/>
+                    <RowDefinition Height="24*"/>
+                    <RowDefinition Height="14*"/>
+                </Grid.RowDefinitions>
 
-        <TextBlock Text="Жалобы" FontSize="12" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#807F7F"/>
+                <TextBlock Text="Пациент: Иванова Ирина Ивановна" FontSize="15"  Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Bottom"/>
 
-        <ui:TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="7" BorderBrush="#D9D9D9" Margin="0,20,0,0" Grid.RowSpan="2"/>
+                <TextBlock Text="Номер полиса: 7777 0000 0000 0000" FontSize="15" Grid.Column="2" Grid.ColumnSpan="6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="248"/>
 
-        <TextBlock Text="Общий осмотр" FontSize="12" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#807F7F"/>
+                <TextBlock Text="Прием:" FontSize="12" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom"/>
 
-        <ui:TextBox Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="7" BorderBrush="#D9D9D9"/>
-        <ComboBox Text="Основной диагноз" FontSize="12" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="7" BorderBrush="#D9D9D9"/>
+                <TextBlock Text="Жалобы" FontSize="12"  Grid.Row="3" Foreground="#807F7F" Grid.ColumnSpan="2" VerticalAlignment="Bottom"/>
 
-        <TextBlock Text="Дополнения к основному диагнозу" FontSize="12" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#807F7F"/>
-        <ui:TextBox Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="7" BorderBrush="#D9D9D9"/>
+                <ui:TextBox Grid.Row="4" Grid.ColumnSpan="8" BorderBrush="#D9D9D9"/>
 
-        <TextBlock Text="Рекомендации" FontSize="12" Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#807F7F"/>
-        <ui:TextBox Grid.Column="1" Grid.Row="12" Grid.ColumnSpan="7" BorderBrush="#D9D9D9"/>
+                <TextBlock Text="Общий осмотр" FontSize="12"  Grid.Row="5" Grid.ColumnSpan="2" Foreground="#807F7F" VerticalAlignment="Bottom"/>
 
-        <TextBlock Text="Направления" FontSize="12" Grid.Column="1" Grid.Row="13" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#807F7F"/>
+                <ui:TextBox  Grid.Row="6" Grid.ColumnSpan="8" BorderBrush="#D9D9D9"/>
+                <ComboBox Text="Основной диагноз" FontSize="12"  Grid.Row="8" Grid.ColumnSpan="8" BorderBrush="#D9D9D9"/>
 
-        <ComboBox Text="Специальность врача" FontSize="14" Grid.Column="1" Grid.Row="14" Grid.ColumnSpan="4" BorderBrush="#D9D9D9" Margin="0,0,122,0" Height="37"/>
+                <TextBlock Text="Дополнения к основному диагнозу" FontSize="12"  Grid.Row="9" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#807F7F" />
+                <ui:TextBox  Grid.Row="10" Grid.ColumnSpan="8" BorderBrush="#D9D9D9"/>
 
-        <Button Content="Добавить направление" Foreground="#FFFFFF" FontSize="16" Grid.Column="4" Grid.Row="14" Grid.ColumnSpan="4" Background="#007BFE" Height="32" Margin="246,0,0,0" Width="180"/>
+                <TextBlock Text="Рекомендации" FontSize="12"  Grid.Row="11" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#807F7F"/>
+                <ui:TextBox  Grid.Row="12" Grid.ColumnSpan="8" BorderBrush="#D9D9D9"/>
 
-        <ListBox Grid.Column="1" Grid.Row="17" Grid.ColumnSpan="7" Grid.RowSpan="3" />
+                <TextBlock Text="Направления" FontSize="12"  Grid.Row="13" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#807F7F" />
 
-        <CheckBox  Grid.Column="1" Grid.Row="17"/>
-        <TextBlock Text="Анализ:" Grid.Column="2" Grid.Row="17"/>
-        <RichTextBox Grid.Column="1" Grid.Row="18" Grid.ColumnSpan="7"/>
+                <ComboBox Text="Специальность врача" FontSize="14"  Grid.Row="14" Grid.ColumnSpan="4" BorderBrush="#D9D9D9"/>
 
-        <CheckBox  Grid.Column="1" Grid.Row="19"/>
-        <TextBlock Text="Исследования:" Grid.Column="2" Grid.Row="19"/>
+                <Button Content="Добавить направление" Foreground="#FFFFFF" FontSize="16" Grid.Column="5" Grid.Row="14" Grid.ColumnSpan="3" Background="#007BFE" HorizontalAlignment="Stretch"/>
 
-        <RichTextBox Grid.Column="1" Grid.Row="20" Grid.ColumnSpan="7"/>
+                <ListBox  Grid.Row="15" Grid.ColumnSpan="7" />
 
-        <Button Content="Прикрепить дополнительные файлы" Background="#007BFE" Foreground ="#FFFFFF" FontSize="16" Grid.Column="1" Grid.Row="21" Grid.ColumnSpan="7" HorizontalAlignment="Stretch"  />
+                <CheckBox  Grid.Row="17" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Text="Анализ:" Grid.Column="1" Grid.Row="17" VerticalAlignment="Center"/>
+                <TextBox Text="Наименование анализа" Grid.Column="1" Grid.Row="17" Grid.ColumnSpan="7"  Foreground="#807F7F" FontSize="14"  VerticalAlignment="Center" Margin="53,0,0,0" />
 
-        <Button Content="Завершить прием" Background="#007BFE" Foreground ="#FFFFFF" FontSize="16" Grid.Column="1" Grid.Row="23" Grid.ColumnSpan="7" HorizontalAlignment="Stretch"  />
-        <DatePicker HorizontalAlignment="Left" Margin="351,18,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+                <RichTextBox  Grid.Row="18" Grid.ColumnSpan="8"/>
+
+                <CheckBox  Grid.Row="19" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Text="Исследования:" Grid.Column="1" Grid.Row="19" VerticalAlignment="Center"/>
+                <TextBox Text="Наименование исследования" Grid.Column="1" Grid.Row="19" Grid.ColumnSpan="7"  Foreground="#807F7F" FontSize="14"  VerticalAlignment="Center" Margin="102,0,0,0"/>
+
+                <RichTextBox Grid.Row="20" Grid.ColumnSpan="8"/>
+
+                <Button Content="Прикрепить дополнительные файлы" Background="#007BFE" Foreground ="#FFFFFF" FontSize="16" Grid.Row="21" Grid.ColumnSpan="8" HorizontalAlignment="Stretch" Height="32"  />
+
+                <Button Content="Завершить прием" Background="#007BFE" Foreground ="#FFFFFF" FontSize="16" Grid.Row="23" Grid.ColumnSpan="8" HorizontalAlignment="Stretch" Height="32"  />
+            </Grid>
+        </ScrollViewer>
+
     </Grid>
 </Window>

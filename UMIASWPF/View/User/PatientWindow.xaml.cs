@@ -26,7 +26,6 @@ namespace UMIASWPF.View.User
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-
             Close();
         }
 
@@ -43,6 +42,9 @@ namespace UMIASWPF.View.User
             WindowState = WindowState.Minimized;
         }
 
+<<<<<<< HEAD:UMIASWPF/View/User/UserWindow.xaml.cs
+        private void MedicalCard_Click(object sender, MouseButtonEventArgs e)
+=======
         private void TreeHandler(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             TreeView tree = sender as TreeView;
@@ -64,9 +66,9 @@ namespace UMIASWPF.View.User
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
+>>>>>>> a7b543c0a2fc321d1c0c4ce5f4990db2d6b8a92f:UMIASWPF/View/User/PatientWindow.xaml.cs
         {
-
+            Frame.Content = new MedicalAppointmentsCardPage();
         }
-
     }
 }

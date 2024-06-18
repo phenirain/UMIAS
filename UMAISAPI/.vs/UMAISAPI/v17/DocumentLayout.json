@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Desktop\\College\\Programming\\UMAISAPI\\",
+  "WorkspaceRootPath": "D:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1E54DE8-3197-4FB1-AAAD-B0D9756BE984}|UMAISAPI\\UMAISAPI.csproj|d:\\desktop\\college\\programming\\umaisapi\\umaisapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C1E54DE8-3197-4FB1-AAAD-B0D9756BE984}|UMAISAPI\\UMAISAPI.csproj|d:\\eliza\\desktop\\emias\\umias\\umaisapi\\umaisapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C1E54DE8-3197-4FB1-AAAD-B0D9756BE984}|UMAISAPI\\UMAISAPI.csproj|solutionrelative:umaisapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -14,20 +14,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1a46fd64-28d5-434c-8eb3-17a02d419b53}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Desktop\\College\\Programming\\UMAISAPI\\UMAISAPI\\appsettings.json",
+              "DocumentMoniker": "D:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\appsettings.json",
               "RelativeDocumentMoniker": "UMAISAPI\\appsettings.json",
-              "ToolTip": "D:\\Desktop\\College\\Programming\\UMAISAPI\\UMAISAPI\\appsettings.json",
+              "ToolTip": "D:\\Eliza\\Desktop\\EMIAS\\UMIAS\\UMAISAPI\\UMAISAPI\\appsettings.json",
               "RelativeToolTip": "UMAISAPI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-06-11T21:12:54.204Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
