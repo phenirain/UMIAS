@@ -1,8 +1,10 @@
 .vs
-.idea
-UMIASApp/obj/
-UMIASApp/bin/
-BindingLibrary/obj/
-BindingLibrary/bin/
-Themes/obj/
-Themes/bin/
+BindingLibrary/bin
+BindingLibrary/obj
+Themes/bin
+Themes/obj
+UMIASWPF/bin
+UMIASWPF/obj
+UMIASWPF/.vs
+UMIASAPI/bin
+UMIASAPI/obj

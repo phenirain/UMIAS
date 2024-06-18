@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="UMIASWPF.View.User.UserEl.DateTimeItemsControlElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UMIASWPF.View.User.UserEl"
+             mc:Ignorable="d" 
+             d:Height="Auto" d:DesignWidth="1170"
+             FontFamily="{DynamicResource Inter}">
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding TimeName}" FontSize="14" Grid.Row="0"/>
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding TimeElements}" Margin="0, 10, 0, 15">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="1" Columns="7" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:TimeElement Margin="10"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</UserControl>

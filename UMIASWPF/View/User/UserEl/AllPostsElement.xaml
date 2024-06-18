@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="UMIASWPF.View.User.UserEl.AllPostsElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UMIASWPF.View.User.UserEl"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="370">
+    <Grid Background="{DynamicResource SecondaryBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{Binding ActiveMonth}" Grid.Row="0" Padding="10"/>
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding MonthAppointments}" Margin="0, 0, 0, 15">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="{Binding Rows}" Columns="1" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:TimeElement Margin="10"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <TextBlock Text="На этот месяц нет записей"  Grid.Row="2" x:Name="NoOne" Visibility="Collapsed"
+                   TextAlignment="Center" VerticalAlignment="Top" Foreground="#807F7F" Margin="0,70,0,0"/>
+
+    </Grid>
+</UserControl>
