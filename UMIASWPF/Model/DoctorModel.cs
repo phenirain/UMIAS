@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace UMIASWPF.Model
 {
-    public class Doctor
+    public class DoctorModel
     {
-        public int? IdDoctor { get; set; }
+        public int IdDoctor { get; set; }
 
         public string Surname { get; set; } = null!;
 

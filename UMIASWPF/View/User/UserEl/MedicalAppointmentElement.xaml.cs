@@ -29,7 +29,7 @@ namespace UMIASWPF.View.User.UserEl
 
         public int IdAppointment;
 
-        public event EventHandler Move;
+        public event EventHandler Click;
 
         public MedicalAppointmentElement(string nameDoctor, string nameappointment, string day, string address, int idDoctor, int idAppointment)
         {
@@ -43,9 +43,9 @@ namespace UMIASWPF.View.User.UserEl
             IdDoctor = idDoctor;
         }
 
-        private void MoveClick(object sender, RoutedEventArgs e)
+        private void MClick(object sender, RoutedEventArgs e)
         {
-            Move(this, EventArgs.Empty);
+            Click(this, EventArgs.Empty);
         }
     }
 }

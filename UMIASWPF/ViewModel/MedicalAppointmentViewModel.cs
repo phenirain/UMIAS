@@ -11,6 +11,11 @@ using UMIASWPF.Utilities;
 using System.Collections.ObjectModel; // Добавьте эту директиву для ObservableCollection
 using System.ComponentModel; // Добавьте эту директиву, если вы используете INotifyPropertyChanged
 using UMIASWPF.Utilities;
+using System.Windows.Documents;
+using UMIASWPF.View.User.Pages;
+using System.IO;
+using UMIASWPF.View.User.UserEl;
+using UMIASWPF.View.User;
 
 namespace UMIASWPF.ViewModel
 {
@@ -39,7 +44,7 @@ namespace UMIASWPF.ViewModel
 		//	PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		//}
 
-		#region MyRegion
+		#region Region
 
 		private string _appointmentName;
 
@@ -75,9 +80,9 @@ namespace UMIASWPF.ViewModel
 
 		public FlowDocument RTB { get; set; }
 
-		private ObservableCollection<Appointments_Control> _elements = new();
+		private ObservableCollection<MedicalAppointmentElement> _elements = new();
 
-		public ObservableCollection<Appointments_Control> Elements
+		public ObservableCollection<MedicalAppointmentElement> Elements
 		{
 			get => _elements;
 			set => SetField(ref _elements, value);
@@ -87,11 +92,11 @@ namespace UMIASWPF.ViewModel
 
 		private int _id;
 
-		public AppointmentViewModel()
+		public MedicalAppointmentsCardViewModel()
 		{
-			var window = Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault();
-			_oms = (window.PatientsComboBox.SelectedItem as Patient).Oms;
-			window.WindowTextBlock.Text = "Приёмы";
+			var window = Application.Current.Windows.OfType<UserWindow>().FirstOrDefault();
+			//_oms = (window.PatientsComboBox.SelectedItem as Patient).Oms;
+			//window.WindowTextBlock.Text = "Приёмы";
 			RTB = new();
 			LoadCards();
 		}
@@ -106,7 +111,7 @@ namespace UMIASWPF.ViewModel
 				if (researchDocument != null)
 				{
 					var doctor = ApiHelper.Get<Doctor>("Doctors", (long)appointment.DoctorId!);
-					var card = new Appointments_Control(researchDocument.DocumentName, $"{doctor!.Surname} {doctor.FirstName.Substring(0, 1)}. {doctor.Patronymic.Substring(0, 1)}.", appointment.AppointmentDate.ToString("dd MMMM yyyy"), doctor.WorkAddress, (int)appointment.IdAppointment);
+					var card = new MedicalAppointmentElement(researchDocument.DocumentName, $"{doctor!.Surname} {doctor.FirstName.Substring(0, 1)}. {doctor.Patronymic.Substring(0, 1)}.", appointment.AppointmentDate.ToString("dd MMMM yyyy"), doctor.WorkAddress, (int)doctor.IdDoctor, (int)appointment.IdAppointment);
 					card.Click += (sender, args) => LoadInfo(sender, args);
 					Elements.Add(card);
 				}
@@ -115,12 +120,12 @@ namespace UMIASWPF.ViewModel
 
 		private void LoadInfo(object sender, EventArgs args)
 		{
-			var card = sender as Appointments_Control;
+			var card = sender as MedicalAppointmentElement;
 			_id = card.IdAppointment;
-			AppointmentName = card.NameResearch;
-			Doctor = card.FIO;
+			AppointmentName = card.NameAppointment;
+			Doctor = card.NameDoctor;
 			Address = card.Address;
-			Date = card.Date;
+			Date = card.Day;
 			var document = ApiHelper.Get<ResearchDocument>("AppointmentDocuments", card.IdAppointment);
 			File.WriteAllText("buffer.rtf", document.Rtf);
 			var range = new TextRange(RTB.ContentStart, RTB.ContentEnd);

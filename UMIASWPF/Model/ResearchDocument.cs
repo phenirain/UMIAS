@@ -13,5 +13,7 @@ namespace UMIASWPF.Model
         public string Rtf { get; set; } = null!;
 
         public byte[]? Attachment { get; set; }
+
+
     }
 }

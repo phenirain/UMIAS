@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using UMIASWPF.Model;
+using UMIASWPF.Utilities;
 
 namespace UMIASWPF.View.User.UserEl
 {
@@ -22,15 +10,31 @@ namespace UMIASWPF.View.User.UserEl
     /// </summary>
     public partial class AllPostsElement : UserControl
     {
-        public string ActiveMonth;
-        public ObservableCollection<Appointment> MonthAppointments;
+        public string ActiveMonth { get; set; }
+        public List<AppointmentElement>? MonthAppointments {  get; set; }
 
-        public AllPostsElement(string ActiveMonth, ObservableCollection<Appointment> appointments)
+        enum Monthes
+        {
+            Январь,
+            Февраль,
+            Март,
+            Апрель, 
+            Май, 
+            Июнь, 
+            Июль, 
+            Август, 
+            Сентябрь,
+            Октябрь,
+            Ноябрь,
+            Декабрь
+        }
+
+        public AllPostsElement(int ActiveMonth, List<AppointmentElement>? appointments = null)
         {
             InitializeComponent();
-            this.ActiveMonth = ActiveMonth;
-            this.MonthAppointments = appointments;
-            if (MonthAppointments.Count == 0) NoOne.Visibility = Visibility.Visible;
+            MonthAppointments = appointments;
+            this.ActiveMonth = Enum.GetName(typeof(Monthes), ActiveMonth - 1).ToString();
+            if (MonthAppointments == null) NoOne.Visibility = Visibility.Visible;
         }
     }
 }

@@ -1,10 +1,11 @@
-﻿<Window x:Class="UMIASWPF.View.User.UserWindow"
+﻿<Window x:Class="UMIASWPF.View.User.PatientWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UMIASWPF.View.User"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="UserWindow" Height="850" Width="1500"
         MouseLeftButtonDown="MoveWindow" FontFamily="{DynamicResource Inter}">
@@ -66,7 +67,7 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
 
         <Border Grid.Column="0" Background="#007BFE" Grid.ColumnSpan="6"/>
 
-        <TreeView Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="4">
+        <TreeView Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="4" SelectedItemChanged="TreeHandler">
             <TreeViewItem  Header="Главная" Foreground="#FFF" >
                 <TreeViewItem Header="Записи и направления"  Foreground="#FFF" />
                 <TreeViewItem Header="Рецепты" Foreground="#FFF"/>
@@ -80,6 +81,9 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
         </TreeView>
         <Button Style="{StaticResource SettingsStyle}" BorderBrush="{x:Null}" Foreground="#FFF" Grid.Column="4" Grid.Row="5"  Height="26" VerticalAlignment="Top">
         </Button>
-        <TextBlock Foreground="#FFF" Grid.Row="5" Grid.Column="1" Text="Полис ОМС:" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="16" />
+        <TextBlock Foreground="#FFF" Grid.Row="5" Grid.Column="1" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="16">
+            <Run Text="Полис ОМС: "/>
+            <Run Text="{Binding OMS}"/>
+        </TextBlock>
     </Grid>
 </Window>

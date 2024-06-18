@@ -1,11 +1,7 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using BingingLibrary;
 
 namespace UMIASWPF.Utilities
@@ -13,7 +9,7 @@ namespace UMIASWPF.Utilities
     public class ApiHelper: BindingHelper
     {
         private static string _url = "http://93.185.159.39:5000/api";
-        public static T Get<T>(string model, int id = 0)
+        public static T? Get<T>(string model, int id = 0)
         {
             HttpClient client = new HttpClient();
             string request = id == 0 ? $"{model}" : $"{model}/{id}";
@@ -22,7 +18,7 @@ namespace UMIASWPF.Utilities
             return JsonConvert.DeserializeObject<T>(response.Content.ReadAsStringAsync().Result);
         }
 
-        public static bool Put<T>(string json, string model, int id)
+        public static bool Put(string json, string model, int id)
         {
             HttpClient client = new HttpClient();
             HttpContent body = new StringContent(json, Encoding.UTF8, "application/json");
@@ -31,7 +27,7 @@ namespace UMIASWPF.Utilities
             return true;
         }
 
-        public static bool Post<T>(string json, string model)
+        public static bool Post(string json, string model)
         {
             HttpClient client = new HttpClient();
             HttpContent body = new StringContent(json, Encoding.UTF8, "application/json");
@@ -40,7 +36,7 @@ namespace UMIASWPF.Utilities
             return true;
         }
 
-        public static bool Delete<T>(string model, int id)
+        public static bool Delete(string model, int id)
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = client.DeleteAsync($"{_url}/{model}/{id}").Result;

@@ -67,13 +67,10 @@
     <Compile Update="View\User\UserEl\SpecialistElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\User\UserEl\SpecialistListElement.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\User\UserEl\TimeElement.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\User\UserWindow.xaml.cs">
+    <Compile Update="View\User\PatientWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -141,13 +138,10 @@
     <Page Update="View\User\UserEl\SpecialistElement.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\User\UserEl\SpecialistListElement.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\User\UserEl\TimeElement.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\User\UserWindow.xaml">
+    <Page Update="View\User\PatientWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
