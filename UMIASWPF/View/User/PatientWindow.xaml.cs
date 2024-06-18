@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using UMIASWPF.View.User.Pages;
+using UMIASWPF.ViewModel.PatientViewModels;
 
 namespace UMIASWPF.View.User
 {
     /// <summary>
     /// Логика взаимодействия для UserWindow.xaml
     /// </summary>
-    public partial class UserWindow : Window
+    public partial class PatientWindow : Window
     {
-        public UserWindow()
+
+        public PatientWindow()
         {
             InitializeComponent();
+            DataContext = new PatientViewModel();
             Frame.Content = new MainPage();
         }
 
@@ -48,6 +41,26 @@ namespace UMIASWPF.View.User
         private void RollUpButton_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
+        }
+
+        private void TreeHandler(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            TreeView tree = sender as TreeView;
+            switch(tree.SelectedItem)
+            {
+                case "Приёмы":
+
+                    break;
+                case "Анализы":
+
+                    break;
+                case "Исследования":
+
+                    break;
+                case "Записи и направления":
+                    Frame.Content = new MainPage();
+                    break;
+            }
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)

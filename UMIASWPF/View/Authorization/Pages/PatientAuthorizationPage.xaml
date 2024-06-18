@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
       xmlns:local="clr-namespace:UMIASWPF.View.Authorization.Pages"
+      xmlns:async="clr-namespace:UMIASWPF.Utilities"
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       mc:Ignorable="d" 
       d:DesignHeight="116" d:DesignWidth="400"
@@ -28,14 +29,7 @@
         <ui:TextBox Height="27" Grid.Row="1" Text="{Binding OMS}" Foreground="{DynamicResource SecondaryForeground}" PlaceholderText="Номер полиса"
                     Style="{DynamicResource ClearTextbox}" Grid.Column="1" Grid.ColumnSpan="3"/>
         <ui:Button Content="Войти" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch"
-                   Style="{DynamicResource FocusingButton}">
-            <b:Interaction.Triggers>
-                <b:EventTrigger EventName="Click">
-                    <b:CallMethodAction
-                        TargetObject="{Binding }"
-                        MethodName="AuthPatient" />
-                </b:EventTrigger>
-            </b:Interaction.Triggers>
+                   Style="{DynamicResource FocusingButton}" Command="{Binding AuthPatient}">
         </ui:Button>
         <ui:Button Content="Я врач" Grid.Row="3" Grid.Column="3" VerticalAlignment="Stretch"
                    Style="{DynamicResource FocusingButton}" Click="ToDoctorPage"/>

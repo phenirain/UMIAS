@@ -1,9 +1,4 @@
 ﻿using BingingLibrary;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using UMIASWPF.Model;
 using UMIASWPF.Properties;
@@ -37,7 +32,10 @@ namespace UMIASWPF.ViewModel
         }
 
         #endregion
-
+        #region commands
+        public BindableCommand AuthPatient { get; set; }
+        public BindableCommand AuthDoctorOrAdmin { get; set; }
+        #endregion
 
         public event EventHandler ToDoctor;
         public event EventHandler ToAdmin;
@@ -45,10 +43,12 @@ namespace UMIASWPF.ViewModel
 
         public AuthorizationViewModel() 
         {
-            
+            AuthPatient = new BindableCommand(_ => _ = _AuthPatient());
+            AuthDoctorOrAdmin = new BindableCommand(_ => _ = _AuthDoctorOrAdmin());
+
         }
 
-        public void AuthPatient(object sender, EventArgs e)
+        private async Task _AuthPatient()
         {
             try
             {
@@ -75,13 +75,13 @@ namespace UMIASWPF.ViewModel
             }
         }
 
-        public void AuthDoctorOrAdmin(object sender, EventArgs e)
+        public async Task _AuthDoctorOrAdmin()
         {
             try
             {
                 if (ID != 0 && Password != null)
                 {
-                    var doctor = Get<Doctor>("Doctors", ID);
+                    var doctor = Get<DoctorModel>("Doctors", ID);
                     var admin = Get<Admin>("Admins", ID);
                     if (doctor.EnterPassword == Password)
                     {
