@@ -5,25 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UMIASWPF.View.User.UserEl"
              mc:Ignorable="d" 
-             d:DesignHeight="90" d:DesignWidth="120">
+             d:DesignHeight="90" d:DesignWidth="120" FontFamily="{DynamicResource Inter}">
     <Grid Background="{DynamicResource PrimaryBackground}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="13*"/>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="18*"/>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="17*"/>
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="38*"/>
-            <ColumnDefinition Width="30*"/>
-            <ColumnDefinition Width="38*"/>
-            <ColumnDefinition Width="9*"/>
-        </Grid.ColumnDefinitions>
-
-        <Image x:Name="UserImage" Grid.Column="2" Grid.Row="1"/>
-        <TextBlock Text="{Binding Doctor}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" FontSize="16" TextAlignment="Center" VerticalAlignment="Center"/>
+        <Button Style="{StaticResource ClearButton}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Source="{Binding Image}"/>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Normal"
+                           Text="{Binding Doctor}"
+                           Foreground="{DynamicResource PrimaryForeground}"/>
+            </Grid>
+        </Button>
     </Grid>
 </UserControl>

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:UMIASWPF"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-             StartupUri="View/Authorization/AuthorizationWindow.xaml">
+             StartupUri="View/User/PatientWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -83,6 +83,15 @@
                         <ui:SymbolIcon Symbol="Delete20"/>
                     </Setter.Value>
                 </Setter>
+            </Style>
+
+            <Style x:Key="ClearButton" TargetType="Button">
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
             </Style>
 
 

@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using UMIASWPF.View.Authorization.Pages;
 using UMIASWPF.View.Doctor;
 using UMIASWPF.View.User;
@@ -73,7 +62,7 @@ namespace UMIASWPF.View.Authorization
 
         private void ToPatient()
         {
-            UserWindow window = new UserWindow();
+            PatientWindow window = new PatientWindow();
             window.Show();
             Close();
         }
