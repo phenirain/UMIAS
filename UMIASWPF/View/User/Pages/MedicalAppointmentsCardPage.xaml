@@ -33,6 +33,7 @@
                 </ListBox>
             </ScrollViewer>
         </Grid>
+        
         <Grid Grid.Column="1" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>

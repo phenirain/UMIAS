@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
              d:DesignHeight="60" d:DesignWidth="350">
+    
     <UserControl.Resources>
         <Style x:Key="ClearButton" TargetType="Button">
             <Setter Property="BorderThickness" Value="0"/>
