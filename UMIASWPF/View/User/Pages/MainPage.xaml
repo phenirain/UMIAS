@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UMIASWPF.View.User.Pages"
       mc:Ignorable="d" 
+      xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
       xmlns:el="clr-namespace:UMIASWPF.View.User.UserEl"
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       d:DesignHeight="850" d:DesignWidth="1180"
@@ -49,10 +50,26 @@
             <ui:TextBlock Grid.Column="0" Text="Действующие записи" FontSize="20" VerticalAlignment="Center" Height="24"/>
             <DatePicker Grid.Column="1" Style="{DynamicResource ClearDatePicker}" Foreground="{DynamicResource SecondaryForeground}" Tag="Записи с:"
                         Text="{Binding CurrentFrom}"
-                        FontSize="12" Margin="10, 0" />
+                        FontSize="12" Margin="10, 0">
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="SelectedDateChanged">
+                        <b:CallMethodAction
+                                TargetObject="{Binding}"
+                                MethodName="SelectedDateCurrentFrom"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </DatePicker>
             <DatePicker Grid.Column="2" Style="{DynamicResource ClearDatePicker}" Foreground="{DynamicResource SecondaryForeground}" Tag="Записи по:"
                         Text="{Binding CurrentTo}"
-                        FontSize="12"/>
+                        FontSize="12">
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="SelectedDateChanged">
+                        <b:CallMethodAction
+                TargetObject="{Binding}"
+                MethodName="SelectedDateCurrentTo"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </DatePicker>
         </Grid>
         <Grid Background="{DynamicResource PrimaryBackground}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF">
@@ -82,10 +99,26 @@
             <ui:TextBlock Grid.Column="0" Text="Архивные записи" FontSize="20" VerticalAlignment="Center" Height="24"/>
             <DatePicker Grid.Column="1" Style="{DynamicResource ClearDatePicker}" Foreground="{DynamicResource SecondaryForeground}" Tag="Записи с:"
                         Text="{Binding ArchiveFrom}"
-                FontSize="12" Height="34" Width="150" Margin="10, 0"/>
+                FontSize="12" Height="34" Width="150" Margin="10, 0">
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="SelectedDateChanged">
+                        <b:CallMethodAction
+                TargetObject="{Binding}"
+                MethodName="SelectedDateArchiveFrom"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </DatePicker>
             <DatePicker Grid.Column="2" Style="{DynamicResource ClearDatePicker}" Foreground="{DynamicResource SecondaryForeground}" Tag="Записи по:"
                         Text="{Binding ArchiveTo}"
-                FontSize="12" Height="34" Width="150"/>
+                FontSize="12" Height="34" Width="150">
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="SelectedDateChanged">
+                        <b:CallMethodAction
+                TargetObject="{Binding}"
+                MethodName="SelectedDateArchiveTo"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </DatePicker>
         </Grid>
         <Grid Background="{DynamicResource PrimaryBackground}" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF">

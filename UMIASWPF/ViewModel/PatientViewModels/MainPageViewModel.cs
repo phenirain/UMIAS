@@ -1,5 +1,6 @@
 ﻿using System.IO.Compression;
 using System.Linq.Expressions;
+using System.Windows.Controls;
 using UMIASWPF.Model;
 using UMIASWPF.Utilities;
 using UMIASWPF.View.User.UserEl;
@@ -16,7 +17,6 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             set
             {
                 SetField(ref _CurrentFrom, value);
-                getCurrentAppointments();
             }
         }
 
@@ -27,7 +27,6 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             set
             {
                 SetField(ref _CurrentTo, value);
-                getCurrentAppointments();
             }
         }
 
@@ -38,7 +37,6 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             set
             {
                 SetField(ref _ArchiveFrom, value);
-                getArchiveAppointments();
             }
         }
 
@@ -49,7 +47,6 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             set
             {
                 SetField(ref _ArchiveFrom, value);
-                getArchiveAppointments();
             }
         }
 
@@ -227,6 +224,30 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             if (sender is AppointmentElement appointment)
             {
             }
+        }
+
+        public void SelectedDateCurrentFrom(object? sender, SelectionChangedEventArgs e)
+        {
+            CurrentFrom = DateOnly.FromDateTime((DateTime)((sender as DatePicker)!).SelectedDate!).ToString();
+            getCurrentAppointments();
+        }
+
+        public void SelectedDateCurrentTo(object? sender, SelectionChangedEventArgs e)
+        {
+            CurrentTo = DateOnly.FromDateTime((DateTime)((sender as DatePicker)!).SelectedDate!).ToString();
+            getCurrentAppointments();
+        }
+
+        public void SelectedDateArchivesFrom(object? sender, SelectionChangedEventArgs e)
+        {
+            ArchiveFrom = DateOnly.FromDateTime((DateTime)((sender as DatePicker)!).SelectedDate!).ToString();
+            getArchiveAppointments();
+        }
+
+        public void SelectedDateArchivesTo(object? sender, SelectionChangedEventArgs e)
+        {
+            ArchiveTo = DateOnly.FromDateTime((DateTime)((sender as DatePicker)!).SelectedDate!).ToString();
+            getArchiveAppointments();
         }
     }
 }
