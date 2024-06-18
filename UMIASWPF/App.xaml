@@ -3,11 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:UMIASWPF"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-<<<<<<< HEAD
              StartupUri="View/Doctor/DoctorWindow.xaml">
-=======
-             StartupUri="View/User/PatientWindow.xaml">
->>>>>>> a7b543c0a2fc321d1c0c4ce5f4990db2d6b8a92f
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
