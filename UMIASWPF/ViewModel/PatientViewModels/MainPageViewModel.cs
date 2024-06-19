@@ -224,12 +224,12 @@ namespace UMIASWPF.ViewModel.PatientViewModels
 
         private void MoveAppointment(object sender, EventArgs args)
         {
-            Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault()!.Frame.Content = new SpecialistSelectionPage();
+            //Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault()!.Frame.Content = new SpecialistSelectionPage();
         }
 
         private void RepeatAppointment(object sender, EventArgs args)
         {
-            Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault()!.Frame.Content = new SpecialistSelectionPage();
+            //Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault()!.Frame.Content = new SpecialistSelectionPage();
         }
 
         public void SelectedDateCurrentFrom(object? sender, SelectionChangedEventArgs e)

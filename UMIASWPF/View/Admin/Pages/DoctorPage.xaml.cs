@@ -18,9 +18,9 @@ namespace UMIASApp.View.Pages
     /// <summary>
     /// Логика взаимодействия для UserDoctor.xaml
     /// </summary>
-    public partial class UserDoctor : Page
+    public partial class DoctorPage : Page
     {
-        public UserDoctor()
+        public DoctorPage()
         {
             InitializeComponent();
         }

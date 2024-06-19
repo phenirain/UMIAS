@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using UMIASApp.View.Pages;
+using UMIASWPF;
 
 namespace UMIASApp.View
 {
@@ -23,7 +24,7 @@ namespace UMIASApp.View
         public AdminWindow()
         {
             InitializeComponent();
-            SelectionFrame.Content = new UserPage(); 
+            SelectionFrame.Content = new AdminPage();
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -47,6 +48,21 @@ namespace UMIASApp.View
         private void RollUpButton_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
+        }
+
+        private void SwitchTheme(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            if (App.Theme == "Dark")
+            {
+                btn.Style = FindResource("MoonStyle") as Style;
+                App.Theme = "Light";
+            }
+            else
+            {
+                btn.Style = FindResource("SunnyStyle") as Style;
+                App.Theme = "Dark";
+            }
         }
     }
 }

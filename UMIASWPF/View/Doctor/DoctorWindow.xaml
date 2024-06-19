@@ -88,7 +88,8 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <DatePicker Grid.Column="1" Height="30" Tag="Расписание" FontSize="12" Foreground="{DynamicResource SecondaryForeground}" Style="{DynamicResource ClearDatePicker}"/>
+            <DatePicker Grid.Column="1" Height="30" Tag="Расписание" FontSize="12" Margin="0, 10"
+                        Foreground="{DynamicResource SecondaryForeground}" Style="{DynamicResource ClearDatePicker}"/>
             <ItemsControl Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"
                           ItemsSource="{Binding Appointments}" Margin="0, 10" Background="Transparent">
                 <ItemsControl.ItemsPanel>
@@ -199,30 +200,30 @@
                     Width="24" Height="24"
                     BorderBrush="{DynamicResource SecondaryBackground}"
                     BorderThickness="2">
-                                <CheckBox IsChecked="{Binding AnalyzeIsActive}" BorderThickness="0"
-                        Background="Transparent"/>  
+                                <CheckBox BorderThickness="0"
+                        Background="Transparent" Checked="Analys_Checked" Unchecked="Analys_Checked"/>  
                 </Border>
                 <TextBlock Text="Анализ:" Grid.Column="1" Grid.Row="17" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryForeground}"/>
-                <ui:TextBox Text="Наименование анализа" Grid.Column="1" Grid.Row="17"
-                         Grid.ColumnSpan="7"  Foreground="#807F7F" FontSize="14"
+                <ui:TextBox x:Name="AnalysName" PlaceholderText="Наименование анализа" Grid.Column="1" Grid.Row="17"
+                         Grid.ColumnSpan="7"  Foreground="#807F7F" FontSize="14"  IsEnabled="False"
                          Style="{DynamicResource ClearTextbox}" VerticalAlignment="Center" Margin=" 55,0,0,0" />
 
-                <RichTextBox  Grid.Row="18" Grid.ColumnSpan="8"/>
+                <RichTextBox x:Name="Analyses" Grid.Row="18" Grid.ColumnSpan="8" Visibility="Collapsed"/>
                 <Border 
                     Grid.Column="0" Grid.Row="19" HorizontalAlignment="Center" VerticalAlignment="Center" 
                     Width="24" Height="24"
                     BorderBrush="{DynamicResource SecondaryBackground}"
                     BorderThickness="2">
-                    <CheckBox IsChecked="{Binding AnalyzeIsActive}" BorderThickness="0"
+                    <CheckBox Checked="Research_Checked" Unchecked="Research_Checked" BorderThickness="0"
                         Background="Transparent"/>
                 </Border>
                 <TextBlock Text="Исследования:" Grid.Column="1" Grid.Row="19" Foreground="{DynamicResource PrimaryForeground}"
                            VerticalAlignment="Center"/>
-                <ui:TextBox Text="Наименование исследования" Grid.Column="1" Grid.Row="19"
+                <ui:TextBox x:Name="ResearchName" PlaceholderText="Наименование исследования" Grid.Column="1" Grid.Row="19" IsEnabled="False"
                          Grid.ColumnSpan="7"  Foreground="#807F7F" Style="{DynamicResource ClearTextbox}"
                             FontSize="14"  VerticalAlignment="Center" Margin="100,0,0,0"/>
 
-                <RichTextBox Grid.Row="20" Grid.ColumnSpan="8"/>
+                <RichTextBox x:Name="Researches" Grid.Row="20" Grid.ColumnSpan="8" Visibility="Collapsed"/>
 
                 <Button Content="Прикрепить дополнительные файлы" Background="#007BFE" Foreground ="#FFFFFF" FontSize="16" Grid.Row="21" Grid.ColumnSpan="8" HorizontalAlignment="Stretch" Height="32"  />
 
