@@ -30,11 +30,11 @@
         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center" Margin="0, 0, 15, 0"
                     Grid.Column="1" Panel.ZIndex="1">
             <Button Style="{StaticResource MinimizeButtonStyle}" Foreground="#FFF"
-Background="Transparent" BorderBrush="{x:Null}"  Grid.Column="0" Click="RollUpButton_Click"/>
+                Background="Transparent" BorderBrush="{x:Null}"  Grid.Column="0" Click="RollUpButton_Click"/>
             <Button Style="{StaticResource ToRollButtonStyle}"  Foreground="#FFF"
-Background="Transparent" BorderBrush="{x:Null}"  Grid.Column="1" Click="UnwrapButton_Click"/>
+                Background="Transparent" BorderBrush="{x:Null}"  Grid.Column="1" Click="UnwrapButton_Click"/>
             <Button Style="{StaticResource CloseButtonStyle}" Foreground="#FFF"
-Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseButton_Click"/>
+                Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseButton_Click"/>
         </StackPanel>
 
         <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="#007BFE">
@@ -72,7 +72,7 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
             </Grid.RowDefinitions>
             <ComboBox ItemsSource="{Binding Roles}"
                       Tag="Роль пользователя" Style="{DynamicResource ClearComboBoxStyle}"
-                      Grid.Row="0" Margin="15, 15, 15, 0"/>
+                      Grid.Row="0" Margin="10, 10, 10, 0"/>
             <Border Grid.Row="1" Grid.Column="1" Height="1" Background="#FF007BFE" HorizontalAlignment="Stretch" Margin="30, 5"/>
             <Frame x:Name="SelectionFrame" Grid.Row="2"/>
             <Grid Grid.Row="4">

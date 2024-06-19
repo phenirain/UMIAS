@@ -9,7 +9,7 @@
       d:Height="Auto" d:DesignWidth="389" FontFamily="{DynamicResource Inter}"
       Title="UserPage">
 
-    <Grid Background="White">
+    <Grid Background="{DynamicResource PrimaryBackground}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="362*"/>
