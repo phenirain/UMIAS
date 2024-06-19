@@ -1,17 +1,29 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using UMIASApp.View.Pages;
 
-namespace UMIASWPF.View.Doctor
+namespace UMIASApp.View
 {
     /// <summary>
-    /// Логика взаимодействия для DoctorWindow.xaml
+    /// Логика взаимодействия для Page_Admin.xaml
     /// </summary>
-    public partial class DoctorWindow : Window
+    public partial class AdminWindow : Window
     {
-        public DoctorWindow()
+        public AdminWindow()
         {
             InitializeComponent();
+            SelectionFrame.Content = new UserPage(); 
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -36,21 +48,5 @@ namespace UMIASWPF.View.Doctor
         {
             WindowState = WindowState.Minimized;
         }
-
-        private void SwitchTheme(object sender, RoutedEventArgs e)
-        {
-            Button btn = (Button)sender;
-            if (App.Theme == "Dark")
-            {
-                btn.Style = FindResource("MoonStyle") as Style;
-                App.Theme = "Light";
-            }
-            else
-            {
-                btn.Style = FindResource("SunnyStyle") as Style;
-                App.Theme = "Dark";
-            }
-        }
-
     }
 }
