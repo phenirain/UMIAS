@@ -23,22 +23,22 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="0" Margin="0, 5" Height="25"
-                    Text="{Binding Password}"
+                    Text="{Binding Admin.EnterPassword}"
                     PlaceholderText="Пароль для входа"
                     Foreground="{DynamicResource SecondaryForeground}"
                     VerticalContentAlignment="Center" Grid.Column="1"/>
         <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="1" Margin="0, 5" Height="25" 
-                    Text="{Binding Surname}"
+                    Text="{Binding Admin.SurnameAdmin}"
                     PlaceholderText="Фамилия"
                     Foreground="{DynamicResource SecondaryForeground}"
                     VerticalContentAlignment="Center" Grid.Column="1"/>
         <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="2" Margin="0, 5" Height="25"
-                    Text="{Binding Name}"
+                    Text="{Binding Admin.FirstName}"
                     PlaceholderText="Имя"
                     Foreground="{DynamicResource SecondaryForeground}"
                     VerticalContentAlignment="Center" Grid.Column="1"/>
         <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="3" Margin="0, 5" Height="25"
-                    Text="{Binding Patronymic}"
+                    Text="{Binding Admin.Patronymic}"
                     PlaceholderText="Отчество"
                     Foreground="{DynamicResource SecondaryForeground}"
                     VerticalContentAlignment="Center" Grid.Column="1"/>

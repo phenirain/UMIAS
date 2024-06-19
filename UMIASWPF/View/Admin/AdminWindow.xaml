@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         xmlns:local="clr-namespace:UMIASWPF"
         mc:Ignorable="d"
@@ -55,12 +56,19 @@
             CanUserReorderColumns="False"
             CanUserResizeColumns="False"
             CanUserSortColumns = "False"
-            AutoGenerateColumns="False"
             HorizontalScrollBarVisibility="Visible"
             VerticalScrollBarVisibility="Visible"
                   VirtualizingPanel.ScrollUnit="Pixel"
             FontSize="12" BorderBrush="{x:Null}"
-            ItemsSource="{Binding Items}"/>
+            ItemsSource="{Binding Items}">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="SelectionChanged">
+                    <b:CallMethodAction
+                                    TargetObject="{Binding}"
+                                    MethodName="SelectionDataGrid"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+        </DataGrid>
         <Grid 
             Background="{DynamicResource PrimaryBackground}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4">
             <Grid.RowDefinitions>
@@ -70,9 +78,17 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <ComboBox ItemsSource="{Binding Roles}"
+            <ComboBox ItemsSource="{Binding Roles}" SelectedItem="{Binding SelectedItem}"
                       Tag="Роль пользователя" Style="{DynamicResource ClearComboBoxStyle}"
-                      Grid.Row="0" Margin="10, 10, 10, 0"/>
+                      Grid.Row="0" Margin="10, 10, 10, 0">
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="SelectionChanged">
+                        <b:CallMethodAction
+                            TargetObject="{Binding}"
+                            MethodName="SelectionRole"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </ComboBox>
             <Border Grid.Row="1" Grid.Column="1" Height="1" Background="#FF007BFE" HorizontalAlignment="Stretch" Margin="30, 5"/>
             <Frame x:Name="SelectionFrame" Grid.Row="2"/>
             <Grid Grid.Row="4">

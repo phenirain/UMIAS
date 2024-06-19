@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UMIASWPF.ViewModel;
 
 namespace UMIASApp.View.Pages
 {
@@ -20,9 +21,14 @@ namespace UMIASApp.View.Pages
     /// </summary>
     public partial class DoctorPage : Page
     {
-        public DoctorPage()
+        AdminViewModel _viewModel;
+
+        public DoctorPage(AdminViewModel viewModel)
         {
+            _viewModel = viewModel;
+            DataContext = _viewModel;
             InitializeComponent();
         }
+
     }
 }
