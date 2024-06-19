@@ -54,7 +54,7 @@ namespace UMIASWPF.ViewModel
             {
                 if (OMS != null)
                 {
-                    var patient = Get<Patient>("Patients", Convert.ToInt32(OMS));
+                    var patient = Get<PatientModel>("Patients", Convert.ToInt32(OMS));
                     if (patient != null)
                     {
                         ToPatient?.Invoke(this, EventArgs.Empty);
@@ -82,7 +82,7 @@ namespace UMIASWPF.ViewModel
                 if (ID != 0 && Password != null)
                 {
                     var doctor = Get<DoctorModel>("Doctors", ID);
-                    var admin = Get<Admin>("Admins", ID);
+                    var admin = Get<AdminModel>("Admins", ID);
                     if (doctor.EnterPassword == Password)
                     {
                         ToDoctor?.Invoke(this, EventArgs.Empty);

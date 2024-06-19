@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using UMIASApp.View.Pages;
 using UMIASWPF;
+using UMIASWPF.ViewModel;
 
 namespace UMIASApp.View
 {
@@ -11,10 +12,14 @@ namespace UMIASApp.View
     /// </summary>
     public partial class AdminWindow : Window
     {
+        AdminViewModel _viewModel;
+
         public AdminWindow()
         {
             InitializeComponent();
-            SelectionFrame.Content = new DoctorPage();
+            _viewModel = new AdminViewModel();
+            SelectionFrame.Content = new DoctorPage(_viewModel);
+            DataContext = _viewModel;
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
