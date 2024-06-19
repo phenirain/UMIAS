@@ -1,17 +1,21 @@
 ﻿using BingingLibrary;
+using Newtonsoft.Json;
 using System.Windows;
+using System.Xml.Linq;
 using UMIASWPF.Model;
 using UMIASWPF.Properties;
 using UMIASWPF.Utilities;
 
 namespace UMIASWPF.ViewModel
 {
+
     public class AuthorizationViewModel: ApiHelper
     {
-        #region obj
-        private string _OMS;
 
-        public string OMS
+        #region obj
+        private long _OMS;
+
+        public long OMS
         {
             get => _OMS;
             set => SetField(ref _OMS, value);
@@ -31,6 +35,7 @@ namespace UMIASWPF.ViewModel
             set => SetField(ref _Password, value);
         }
 
+        private List<SavingPatient> _Patients { get; set; }
         #endregion
         #region commands
         public BindableCommand AuthPatient { get; set; }
@@ -45,7 +50,7 @@ namespace UMIASWPF.ViewModel
         {
             AuthPatient = new BindableCommand(_ => _ = _AuthPatient());
             AuthDoctorOrAdmin = new BindableCommand(_ => _ = _AuthDoctorOrAdmin());
-
+            _Patients = JsonConvert.DeserializeObject<List<SavingPatient>>(Settings.Default.Patients);
         }
 
         private async Task _AuthPatient()
@@ -54,12 +59,22 @@ namespace UMIASWPF.ViewModel
             {
                 if (OMS != null)
                 {
-                    var patient = Get<PatientModel>("Patients", Convert.ToInt32(OMS));
+                    var patient = Get<PatientModel>("Patients", OMS);
                     if (patient != null)
                     {
-                        ToPatient?.Invoke(this, EventArgs.Empty);
-                        Settings.Default.Patient = Convert.ToInt32(OMS);
+                        if (_Patients != null)
+                        {
+                            SavingPatient newPatient = new SavingPatient(nickname: patient.Nickname, oms: OMS);
+                            if (!_Patients.Exists(x => x.Oms == newPatient.Oms))
+                            {
+                                _Patients.Add(newPatient);
+                                string json = JsonConvert.SerializeObject(_Patients);
+                                Settings.Default.Patients = json;
+                            }
+                        }
+                        Settings.Default.Patient = OMS;
                         Settings.Default.Save();
+                        ToPatient?.Invoke(this, EventArgs.Empty);
                     } else
                     {
                         MessageBox.Show("Данные введены не корректно");

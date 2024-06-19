@@ -21,7 +21,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Speciality}"
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Speciality}" Foreground="{DynamicResource PrimaryForeground}"
                    TextAlignment="Center" FontSize="12" Margin="0, 5" LineHeight="14"/>
         <TextBlock  Grid.Column="0" Grid.Row="2" Text="{Binding DoctorName}" Margin="10, 0, 0, 0"
                    Foreground="{DynamicResource SecondaryForeground}" TextAlignment="Left" FontSize="12" LineHeight="14"/>

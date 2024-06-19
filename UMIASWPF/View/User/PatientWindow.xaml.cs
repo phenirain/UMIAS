@@ -16,7 +16,7 @@ namespace UMIASWPF.View.User
         {
             InitializeComponent();
             DataContext = new PatientViewModel();
-            //Frame.Content = new MainPage();
+            Frame.Content = new MainPage();
         }
 
         private void MoveWindow(object sender, MouseButtonEventArgs e)
@@ -49,7 +49,8 @@ namespace UMIASWPF.View.User
         private void TreeHandler(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             TreeView tree = sender as TreeView;
-            switch(tree.SelectedItem)
+            TreeViewItem item = tree.SelectedItem as TreeViewItem;
+            switch(item.Header)
             {
                 case "Приёмы":
                     Frame.Content = new MedicalAppointmentsCardPage();
@@ -68,7 +69,7 @@ namespace UMIASWPF.View.User
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Content = new MedicalAppointmentsCardPage();
+            Frame.Content = new ProfilePage();
         }
     }
 }

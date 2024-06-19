@@ -1,4 +1,7 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
+using UMIASWPF.View.Authorization;
+using UMIASWPF.ViewModel.PatientViewModels;
 
 namespace UMIASWPF.View.User.Pages
 {
@@ -10,11 +13,7 @@ namespace UMIASWPF.View.User.Pages
         public ProfilePage()
         {
             InitializeComponent();
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            DataContext = new ProfilePageVIewModel();
         }
     }
 }
