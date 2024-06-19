@@ -70,5 +70,17 @@ namespace UMIASWPF.Properties {
                 this["Doctor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[{\"Nickname\":\"Nekto228\",\"Oms\": 1}]")]
+        public string Patients {
+            get {
+                return ((string)(this["Patients"]));
+            }
+            set {
+                this["Patients"] = value;
+            }
+        }
     }
 }
