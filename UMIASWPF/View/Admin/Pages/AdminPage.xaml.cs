@@ -18,9 +18,9 @@ namespace UMIASApp.View.Pages
     /// <summary>
     /// Логика взаимодействия для OnlyAdmin.xaml
     /// </summary>
-    public partial class OnlyAdmin : Page
+    public partial class AdminPage : Page
     {
-        public OnlyAdmin()
+        public AdminPage()
         {
             InitializeComponent();
         }

@@ -52,5 +52,38 @@ namespace UMIASWPF.View.Doctor
             }
         }
 
+        private void Analys_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox box)
+            {
+                if ((bool)box.IsChecked)
+                {
+                    AnalysName.IsEnabled = true;
+                    Analyses.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    AnalysName.IsEnabled = false;
+                    Analyses.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
+
+        private void Research_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox box)
+            {
+                if ((bool)box.IsChecked)
+                {
+                    ResearchName.IsEnabled = true;
+                    Researches.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ResearchName.IsEnabled = false;
+                    Researches.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
     }
 }
