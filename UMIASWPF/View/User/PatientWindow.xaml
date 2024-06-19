@@ -74,13 +74,10 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
                 <TreeViewItem Header="Диспансеризация"  Foreground="#FFF"/>
             </TreeViewItem>
             <TreeViewItem Header="Медкарта" Foreground="#FFF">
-<<<<<<< HEAD
-                <TreeViewItem Header="Приёмы" Foreground="#FFF" MouseUp="MedicalCard_Click"/>
+                <TreeViewItem Header="Приёмы" Foreground="#FFF"/>
                 <TreeViewItem Header="Анализы" Foreground="#FFF"/>
-=======
                 <TreeViewItem Header="Приёмы" Foreground="#FFF" />
-                <TreeViewItem Header="Анализы" Foreground="#FFF" MouseUp="Analizy"/>
->>>>>>> Gleb
+                <TreeViewItem Header="Анализы" Foreground="#FFF"/>
                 <TreeViewItem Header="Исследования"  Foreground="#FFF"/>
             </TreeViewItem>
         </TreeView>

@@ -28,9 +28,5 @@ namespace UMIASWPF.Model
 
         public string DocumentName { get; set; } = null!;
 
-
-
-
-
     }
 }

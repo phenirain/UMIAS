@@ -20,29 +20,7 @@ using UMIASWPF.View.User;
 namespace UMIASWPF.ViewModel.PatientViewModels
 {
     public class MedicalAppointmentViewModel : ApiHelper
-    {
-        //public ObservableCollection<Appointment> Appointments { get; set; }
-
-        //public MedicalAppointmentsCardViewModel()
-        //{
-        //	Appointments = new ObservableCollection<Appointment>();
-        //	LoadAppointments();
-        //}
-
-        //private async void LoadAppointments()
-        //{
-        //	var appointmentsData = await ApiHelper.Get<List<Appointment>>("appointments");
-        //	foreach (var appointment in appointmentsData)
-        //	{
-        //		Appointments.Add(appointment);
-        //	}
-        //}
-
-        //public event PropertyChangedEventHandler PropertyChanged;
-        //protected virtual void OnPropertyChanged(string propertyName)
-        //{
-        //	PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //}
+    { 
 
         #region Region
 
@@ -92,11 +70,9 @@ namespace UMIASWPF.ViewModel.PatientViewModels
 
         private int _id;
 
-        public MedicalAppointmentsCardViewModel()
+        public MedicalAppointmentViewModel()
         {
-            var window = Application.Current.Windows.OfType<UserWindow>().FirstOrDefault();
-            //_oms = (window.PatientsComboBox.SelectedItem as Patient).Oms;
-            //window.WindowTextBlock.Text = "Приёмы";
+            var window = Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault();
             RTB = new();
             LoadCards();
         }
@@ -107,11 +83,14 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             foreach (var appointment in appointments)
             {
                 var researchDocument =
-                    ApiHelper.Get<ResearchDocument>("AppointmentDocuments", (long)appointment.IdAppointment!);
+                    ApiHelper.Get<ResearchDocument>("AppointmentDocuments", (int)appointment.IdAppointment!);
                 if (researchDocument != null)
                 {
-                    var doctor = ApiHelper.Get<DoctorModel>("Doctors", (long)appointment.DoctorId!);
-                    var card = new MedicalAppointmentElement(researchDocument.DocumentName, $"{doctor!.Surname} {doctor.FirstName.Substring(0, 1)}. {doctor.Patronymic.Substring(0, 1)}.", appointment.AppointmentDate.ToString("dd MMMM yyyy"), doctor.WorkAddress, (int)doctor.IdDoctor, (int)appointment.IdAppointment);
+                    var doctor = ApiHelper.Get<DoctorModel>("Doctors", (int)appointment.DoctorId!);
+                    var card = new MedicalAppointmentElement(researchDocument.DocumentName,
+                        $"{doctor!.Surname} {doctor.FirstName.Substring(0, 1)}. {doctor.Patronymic.Substring(0, 1)}.",
+                        appointment.AppointmentDate.ToString("dd MMMM yyyy"), doctor.WorkAddress, (int)doctor.IdDoctor,
+                        (int)appointment.IdAppointment);
                     card.Click += (sender, args) => LoadInfo(sender, args);
                     Elements.Add(card);
                 }

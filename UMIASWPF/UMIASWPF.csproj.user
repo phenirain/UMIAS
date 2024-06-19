@@ -37,11 +37,10 @@
     <Compile Update="View\User\Pages\MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Update="View\User\Pages\MedicalAppointmentsCardPage.xaml.cs">
-=======
-    <Compile Update="View\User\Pages\MedCardAnalyses.xaml.cs">
->>>>>>> Gleb
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\MedCardAnalysesPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\User\Pages\ProfilePage.xaml.cs">
@@ -79,9 +78,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\Authorization\AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -112,11 +108,10 @@
     <Page Update="View\User\Pages\MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-<<<<<<< HEAD
     <Page Update="View\User\Pages\MedicalAppointmentsCardPage.xaml">
-=======
-    <Page Update="View\User\Pages\MedCardAnalyses.xaml">
->>>>>>> Gleb
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\MedCardAnalysesPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\Pages\ProfilePage.xaml">

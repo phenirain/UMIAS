@@ -18,9 +18,9 @@ namespace UMIASWPF.View.User.Pages
     /// <summary>
     /// Логика взаимодействия для MedCardAnalyses.xaml
     /// </summary>
-    public partial class MedCardAnalyses : Page
+    public partial class MedCardAnalysesPage : Page
     {
-        public MedCardAnalyses()
+        public MedCardAnalysesPage()
         {
             InitializeComponent();
         }

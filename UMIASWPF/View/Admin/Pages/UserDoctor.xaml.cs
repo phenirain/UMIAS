@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace UMIASApp.View.Page
+namespace UMIASApp.View.Pages
 {
     /// <summary>
     /// Логика взаимодействия для UserDoctor.xaml
