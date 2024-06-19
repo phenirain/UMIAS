@@ -35,7 +35,7 @@
                     PlaceholderText="Отчество"  Grid.Column="1" Foreground="{DynamicResource SecondaryForeground}"
                     VerticalContentAlignment="Center"/>
         <ComboBox Style="{DynamicResource ClearComboBoxStyle}" Grid.Row="4" Margin="10, 5" Height="25"
-                    ItemsSource="{Binding Specialities}" DisplayMemberPath="NameSpecialities"
+                    ItemsSource="{Binding Specialities}" DisplayMemberPath="NameSpecialities" SelectedIndex="{Binding Doctor.SpecialityId}"
                     Tag="Специальность врача"  Grid.Column="1" Foreground="{DynamicResource SecondaryForeground}"
                     VerticalContentAlignment="Center">
             <b:Interaction.Triggers>

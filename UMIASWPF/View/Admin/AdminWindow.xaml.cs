@@ -3,7 +3,9 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using UMIASApp.View.Pages;
 using UMIASWPF;
+using UMIASWPF.View.Authorization;
 using UMIASWPF.ViewModel;
+using Wpf.Ui.Controls;
 
 namespace UMIASApp.View
 {
@@ -18,7 +20,7 @@ namespace UMIASApp.View
         {
             InitializeComponent();
             _viewModel = new AdminViewModel();
-            SelectionFrame.Content = new DoctorPage(_viewModel);
+            SelectionFrame.Content = new UserPage(_viewModel);
             DataContext = _viewModel;
         }
 
@@ -47,7 +49,7 @@ namespace UMIASApp.View
 
         private void SwitchTheme(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            System.Windows.Controls.Button btn = (System.Windows.Controls.Button)sender;
             if (App.Theme == "Dark")
             {
                 btn.Style = FindResource("MoonStyle") as Style;
@@ -59,5 +61,14 @@ namespace UMIASApp.View
                 App.Theme = "Dark";
             }
         }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            AuthorizationWindow window = new AuthorizationWindow();
+            window.Show();
+            Close();
+        }
+
+
     }
 }

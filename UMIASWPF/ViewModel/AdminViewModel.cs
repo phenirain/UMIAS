@@ -1,12 +1,17 @@
 ﻿using BingingLibrary;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using UMIASApp.View;
+using UMIASApp.View.Pages;
 using UMIASWPF.Model;
 using UMIASWPF.Utilities;
 
@@ -45,6 +50,7 @@ namespace UMIASWPF.ViewModel
             set => SetField(ref _Patient, value);
         }
 
+        private int _selectedIndex;
         #endregion
 
         #region collections
@@ -62,22 +68,35 @@ namespace UMIASWPF.ViewModel
 
         #endregion
 
+
         public AdminViewModel()
         {
             Roles = new List<string>() { "Пациент", "Врач", "Администратор" };
             SelectedItem = Roles[0];
             Specialities = Get<List<Speciality>>("Specialities");
             Items = Get<ObservableCollection<object>>("Patients");
+            Patient = new PatientModel();
+            Doctor = new DoctorModel();
+            Admin = new AdminModel();
         }
 
         public void SelectionRole()
         {
             if (SelectedItem == "Пациент")
+            {
+                Application.Current.Windows.OfType<AdminWindow>().FirstOrDefault()!.SelectionFrame.Content = new UserPage(this);
                 Items = Get<ObservableCollection<object>>("Patients");
+            }
             else if (SelectedItem == "Врач")
+            {
+                Application.Current.Windows.OfType<AdminWindow>().FirstOrDefault()!.SelectionFrame.Content = new DoctorPage(this);
                 Items = Get<ObservableCollection<object>>("Doctors");
+            }
             else
+            {
+                Application.Current.Windows.OfType<AdminWindow>().FirstOrDefault()!.SelectionFrame.Content = new AdminPage(this);
                 Items = Get<ObservableCollection<object>>("Admins");
+            }
         }
 
         public void SelectionSpeciality(object sender, RoutedEventArgs e)
@@ -89,6 +108,91 @@ namespace UMIASWPF.ViewModel
                     Doctor.SpecialityId = (cmb.SelectedItem as Speciality).IdSpeciality;
                 }
             }
+        }
+
+        public void SelectionDataGrid(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is DataGrid dg)
+            {
+                if (dg.SelectedItem != null)
+                {
+                    _selectedIndex = dg.SelectedIndex;
+                    if (SelectedItem == "Пациент")
+                        Patient = JsonConvert.DeserializeObject<PatientModel>(dg.SelectedItem.ToString());
+                    else if (SelectedItem == "Врач")
+                    {
+                        Doctor = JsonConvert.DeserializeObject<DoctorModel>(dg.SelectedItem.ToString());
+                    }
+                    else
+                        Admin = JsonConvert.DeserializeObject<AdminModel>(dg.SelectedItem.ToString());
+                }
+            }
+        }
+
+        public void Add()
+        {
+            string json;
+            bool response = false;
+            switch (SelectedItem)
+            {
+                case "Пациент":
+                    json = JsonConvert.SerializeObject(Patient);
+                    response = Post(json, "Patients");
+                    break;
+                case "Врач":
+                    json = JsonConvert.SerializeObject(Doctor);
+                    response = Post(json, "Doctors");
+                    break;
+                case "Администратор":
+                    json = JsonConvert.SerializeObject(Admin);
+                    response = Post(json, "Admins");
+                    break;
+            }
+            if (response) SelectionRole();
+        }
+
+        public void Update()
+        {
+            string json;
+            bool response = false;
+            switch (SelectedItem)
+            {
+                case "Пациент":
+                    json = JsonConvert.SerializeObject(Patient);
+                    response = Put(json, "Patients", Patient.Oms);
+                    break;
+                case "Врач":
+                    json = JsonConvert.SerializeObject(Doctor);
+                    response = Put(json, "Doctors", Doctor.IdDoctor);
+                    break;
+                case "Администратор":
+                    json = JsonConvert.SerializeObject(Admin);
+                    response = Put(json, "Admins", (long)Admin.IdAdmin);
+                    break;
+            }
+            if (response) SelectionRole();
+        }
+
+        public void Delete()
+        {
+            string json;
+            bool response = false;
+            switch (SelectedItem)
+            {
+                case "Пациент":
+                    json = JsonConvert.SerializeObject(Patient);
+                    response = Delete("Patients", Patient.Oms);
+                    break;
+                case "Врач":
+                    json = JsonConvert.SerializeObject(Doctor);
+                    response = Delete("Doctors", Doctor.IdDoctor);
+                    break;
+                case "Администратор":
+                    json = JsonConvert.SerializeObject(Admin);
+                    response = Delete("Admins", (long)Admin.IdAdmin);
+                    break;
+            }
+            if (response) SelectionRole();
         }
     }
 }
