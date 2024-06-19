@@ -15,10 +15,10 @@ namespace UMIASWPF.Utilities
             string request = id == 0 ? $"{model}" : $"{model}/{id}";
             HttpResponseMessage response = client.GetAsync($"{_url}/{model}/{(id != 0 ? id.ToString() : string.Empty)}").Result;
             if (response.StatusCode != HttpStatusCode.OK) return default;
-            return JsonConvert.DeserializeObject<T>(response.Content.ReadAsStringAsync().Result);
+            return JsonConvert.DeserializeObject<T>(response.Content.ReadAsStringAsync().Result, JsonSettings.PascalCaseSettings);
         }
 
-        public static bool Put(string json, string model, int id)
+        public static bool Put(string json, string model, long id)
         {
             HttpClient client = new HttpClient();
             HttpContent body = new StringContent(json, Encoding.UTF8, "application/json");
@@ -36,7 +36,7 @@ namespace UMIASWPF.Utilities
             return true;
         }
 
-        public static bool Delete(string model, int id)
+        public static bool Delete(string model, long id)
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = client.DeleteAsync($"{_url}/{model}/{id}").Result;

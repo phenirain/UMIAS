@@ -50,7 +50,7 @@
         Grid.Column="1" Click="SwitchTheme" Foreground="White" VerticalAlignment="Center"
         HorizontalAlignment="Left" Width="20" Height="22" Grid.Row="0"/>
         </Grid>
-        <DataGrid Background="{DynamicResource SecondaryBackground}"
+        <ui:DataGrid Background="{DynamicResource SecondaryBackground}"
             Grid.Column="0" Grid.Row="1"
             x:Name="DGrid" IsReadOnly="True"
             CanUserReorderColumns="False"
@@ -68,7 +68,7 @@
                                     MethodName="SelectionDataGrid"/>
                 </b:EventTrigger>
             </b:Interaction.Triggers>
-        </DataGrid>
+        </ui:DataGrid>
         <Grid 
             Background="{DynamicResource PrimaryBackground}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4">
             <Grid.RowDefinitions>
@@ -100,15 +100,39 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <ui:Button Content="Добавить запись" Grid.Row="0" Margin="10,5"
-                           Style="{DynamicResource FocusingButton}" Height="30"/>
+                           Style="{DynamicResource FocusingButton}" Height="30">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="Click">
+                            <b:CallMethodAction
+                                TargetObject="{Binding}"
+                                MethodName="Add"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                </ui:Button>
                 <ui:Button Content="Изменить запись" Grid.Row="1" Margin="10,5"
-                           Style="{DynamicResource FocusingButton}" Height="30"/>
+                           Style="{DynamicResource FocusingButton}" Height="30">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="Click">
+                            <b:CallMethodAction
+                                TargetObject="{Binding}"
+                                MethodName="Update"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                </ui:Button>
                 <ui:Button Content="Удалить запись" Grid.Row="2" Margin="10,5"
-                           Style="{DynamicResource FocusingButton}" Height="30"/>
+                           Style="{DynamicResource FocusingButton}" Height="30">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="Click">
+                            <b:CallMethodAction
+                                            TargetObject="{Binding}"
+                                            MethodName="Delete"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                </ui:Button>
                 <Border Grid.Row="3" Grid.Column="3" Height="1" Margin="30, 0"
                         Background="#FF007BFE" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
                 <ui:Button Content="Выйти из аккаунта" Grid.Row="4" Margin="10, 5, 10, 10"
-                           Style="{DynamicResource AttentionButton}" Height="30"/>
+                           Style="{DynamicResource AttentionButton}" Height="30" Click="Exit"/>
             </Grid>
         </Grid>
     </Grid>
