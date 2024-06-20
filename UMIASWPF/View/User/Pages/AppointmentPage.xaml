@@ -23,11 +23,11 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="160"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Записаться на приём" FontSize="20"/>
-        <TextBlock Grid.Row="1" Text="ОРВИ/ COVID 19" FontSize="20" Margin="0, 10"/>
+        <TextBlock Grid.Row="0" Text="Записаться на приём" FontSize="20" Foreground="{DynamicResource PrimaryForeground}"/>
+        <TextBlock Grid.Row="1" Text="ОРВИ/ COVID 19" FontSize="20" Margin="0, 10" Foreground="{DynamicResource PrimaryForeground}"/>
         <Grid Background="{DynamicResource SecondaryBackground}" Margin="0, 10" Grid.Row="2">
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10" Padding="10">
-                <ListBox ItemsSource="{Binding L1}">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10">
+                <ListBox ItemsSource="{Binding ARI}">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>
@@ -36,10 +36,10 @@
                 </ListBox>
             </ScrollViewer>
         </Grid>
-        <TextBlock Grid.Row="3" Text="Специальности" FontSize="20" Margin="0, 10"/>
+        <TextBlock Grid.Row="3" Text="Специальности" FontSize="20" Margin="0, 10" Foreground="{DynamicResource PrimaryForeground}"/>
         <Grid Background="{DynamicResource SecondaryBackground}" Margin="0, 10" Grid.Row="4">
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10" Padding="10">
-                <ListBox ItemsSource="{Binding L1}">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10">
+                <ListBox ItemsSource="{Binding Specialities}">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>
@@ -48,10 +48,10 @@
                 </ListBox>
             </ScrollViewer>
         </Grid>
-        <TextBlock Grid.Row="5" Text="Направления" FontSize="20" Margin="0, 10"/>
+        <TextBlock Grid.Row="5" Text="Направления" FontSize="20" Margin="0, 10" Foreground="{DynamicResource PrimaryForeground}"/>
         <Grid Background="{DynamicResource SecondaryBackground}" Margin="0, 10" Grid.Row="6">
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10" Padding="10">
-                <ListBox ItemsSource="{Binding L1}">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10">
+                <ListBox ItemsSource="{Binding Directions}">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>
@@ -60,10 +60,10 @@
                 </ListBox>
             </ScrollViewer>
         </Grid>
-        <TextBlock Grid.Row="7" Text="Цели обращения" FontSize="20" Margin="0, 10"/>
+        <TextBlock Grid.Row="7" Text="Цели обращения" FontSize="20" Margin="0, 10" Foreground="{DynamicResource PrimaryForeground}"/>
         <Grid Background="{DynamicResource SecondaryBackground}" Margin="0, 10" Grid.Row="8">
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10" Padding="10">
-                <ListBox ItemsSource="{Binding L1}">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10" >
+                <ListBox ItemsSource="{Binding PurposeAppeals}">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>

@@ -14,5 +14,6 @@ namespace UMIASWPF.View.User.Pages
             InitializeComponent();
             DataContext = new MainPageViewModel();
         }
+
     }
 }

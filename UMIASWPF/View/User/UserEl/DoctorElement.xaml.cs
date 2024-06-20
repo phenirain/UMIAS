@@ -11,11 +11,11 @@ namespace UMIASWPF.View.User.UserEl
         public string ImagePath { get; set; }
         public string Doctor { get; set; }
 
-        public DoctorElement(int Image, string Doctor)
+        public DoctorElement(string Image, string Doctor)
         {
             InitializeComponent();
             DataContext = this;
-            this.ImagePath = $"../../../Images/{Image}.png";
+            ImagePath = $"../../../Images/{Image}.png";
             this.Doctor = Doctor;
         }
     }
