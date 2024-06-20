@@ -26,15 +26,16 @@ GO
 CREATE TABLE Specialities (
     IdSpeciality int IDENTITY,
     Speciality_Name varchar(50) NOT NULL,
+	ImagePath nvarchar(200) NOT NULL,
     PRIMARY KEY (IdSpeciality)
 );
 GO
 
-INSERT INTO Specialities (Speciality_Name) 
+INSERT INTO Specialities (Speciality_Name, ImagePath) 
 VALUES 
-('Therapist'), 
-('Surgeon'), 
-('Ophthalmologist');
+('Therapist', '1'), 
+('Surgeon', '2'), 
+('Ophthalmologist', '3');
 GO
 
 CREATE TABLE Patient (
@@ -73,7 +74,7 @@ VALUES
 GO
 
 CREATE TABLE Directions (
-    IdDirection char(18) NOT NULL,
+    IdDirection int identity,
     IdSpeciality int NOT NULL,
     OMS bigint NOT NULL,
     PRIMARY KEY (IdDirection),
@@ -129,42 +130,45 @@ GO
 
 CREATE TABLE AppointmentDocument (
     IdAppointment int NOT NULL,
+	NameAppointmentDocument nvarchar(50) NOT NULL,
     Rtf nvarchar(max) NOT NULL,
     PRIMARY KEY (IdAppointment),
     FOREIGN KEY (IdAppointment) REFERENCES Appointments(Idappointment)
 );
 GO
 
-INSERT INTO AppointmentDocument (IdAppointment, Rtf)
+INSERT INTO AppointmentDocument (IdAppointment, NameAppointmentDocument, Rtf)
 VALUES 
-(1, 'Ticket1'),
-(2, 'Ticket2');
+(1, 'Ticket1', 'asdasda'),
+(2, 'Ticket2', 'asdadsa');
 GO
 
 CREATE TABLE AnalyseDocument (
     IdAppointment int NOT NULL,
+	NameAnalyseDocument nvarchar(50) NOT NULL,
     Rtf nvarchar(max) NOT NULL,
     PRIMARY KEY (IdAppointment),
     FOREIGN KEY (IdAppointment) REFERENCES Appointments(Idappointment)
 );
 GO
 
-INSERT INTO AnalyseDocument (IdAppointment, Rtf)
+INSERT INTO AnalyseDocument (IdAppointment, NameAnalyseDocument, Rtf)
 VALUES 
-(1, 'Result1'),
-(2, 'Result2');
+(1, 'Result1', 'asdasda'),
+(2, 'Result2', 'asdasda');
 GO
 
 CREATE TABLE ResearchDocument (
     IdAppointment int NOT NULL,
+	NameResearchDocument nvarchar(50) NOT NULL,
     Rtf nvarchar(max) NOT NULL,
     PRIMARY KEY (IdAppointment),
     FOREIGN KEY (IdAppointment) REFERENCES Appointments(Idappointment)
 );
 GO
 
-INSERT INTO ResearchDocument (IdAppointment, Rtf)
+INSERT INTO ResearchDocument (IdAppointment, NameResearchDocument, Rtf)
 VALUES 
-(1, 'Documnet1'),
-(2, 'Document2');
+(1, 'Documnet1', 'asdasd'),
+(2, 'Document2', 'asdasd');
 GO
