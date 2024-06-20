@@ -19,20 +19,15 @@ using UMIASWPF.View.User;
 namespace UMIASWPF.ViewModel.PatientViewModels
 {
     public class MedicalAppointmentViewModel : ApiHelper
-<<<<<<< HEAD
     {
-=======
-    { 
->>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
-
         #region Region
 
-        private string _appointmentName;
+        private string _nameAppointment;
 
-        public string AppointmentName
+        public string NameAppointment
         {
-            get => _appointmentName;
-            set => SetField(ref _appointmentName, value);
+            get => _nameAppointment;
+            set => SetField(ref _nameAppointment, value);
         }
 
         private string _address;
@@ -43,20 +38,20 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             set => SetField(ref _address, value);
         }
 
-        private string _doctor;
+        private string _nameDoctor;
 
-        public string Doctor
+        public string NameDoctor
         {
-            get => _doctor;
-            set => SetField(ref _doctor, value);
+            get => _nameDoctor;
+            set => SetField(ref _nameDoctor, value);
         }
 
-        private string _date;
+        private string _day;
 
-        public string Date
+        public string Day
         {
-            get => _date;
-            set => SetField(ref _date, value);
+            get => _day;
+            set => SetField(ref _day, value);
         }
 
         public FlowDocument RTB { get; set; }
@@ -73,17 +68,13 @@ namespace UMIASWPF.ViewModel.PatientViewModels
 
         private int _id;
 
-<<<<<<< HEAD
-
         #endregion
-        public MedicalAppointmentViewModel()
-        {
-            //var window = Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault();
-=======
+    
+
         public MedicalAppointmentViewModel()
         {
             var window = Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault();
->>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
+            _oms = Settings.Default.Patient;
             RTB = new();
             LoadCustomElements();
             LoadCards();
@@ -107,23 +98,17 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             var appointments = Get<List<Appointment>>("Appointments")!.Where(item => item.Oms == _oms).OrderBy(item => item.AppointmentDate).ToList();
             foreach (var appointment in appointments)
             {
-<<<<<<< HEAD
-                ResearchDocument researchDocument =
-=======
-                var researchDocument =
->>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
-                    ApiHelper.Get<ResearchDocument>("AppointmentDocuments", (int)appointment.IdAppointment!);
+                var researchDocument = ApiHelper.Get<ResearchDocument>("AppointmentDocuments", (int)appointment.IdAppointment!);
                 if (researchDocument != null)
                 {
                     var doctor = ApiHelper.Get<DoctorModel>("Doctors", (int)appointment.DoctorId!);
-<<<<<<< HEAD
-                    var card = new MedicalAppointmentElement(researchDocument.DocumentName, $"{doctor!.Surname} {doctor.FirstName.Substring(0, 1)}. {doctor.Patronymic.Substring(0, 1)}.", appointment.AppointmentDate.ToString("dd MMMM yyyy"), doctor.WorkAddress, (int)doctor.IdDoctor, (int)appointment.IdAppointment);
-=======
+
+
                     var card = new MedicalAppointmentElement(researchDocument.DocumentName,
                         $"{doctor!.Surname} {doctor.FirstName.Substring(0, 1)}. {doctor.Patronymic.Substring(0, 1)}.",
                         appointment.AppointmentDate.ToString("dd MMMM yyyy"), doctor.WorkAddress, (int)doctor.IdDoctor,
                         (int)appointment.IdAppointment);
->>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
+
                     card.Click += (sender, args) => LoadInfo(sender, args);
                     Elements.Add(card);
                 }
@@ -134,10 +119,10 @@ namespace UMIASWPF.ViewModel.PatientViewModels
         {
             var card = sender as MedicalAppointmentElement;
             _id = card.IdAppointment;
-            AppointmentName = card.NameAppointment;
-            Doctor = card.NameDoctor;
+            NameAppointment = card.NameAppointment;
+            NameDoctor = card.NameDoctor;
             Address = card.Address;
-            Date = card.Day;
+            Day = card.Day;
             var document = Get<ResearchDocument>("AppointmentDocuments", card.IdAppointment);
             File.WriteAllText("buffer.rtf", document.Rtf);
             var range = new TextRange(RTB.ContentStart, RTB.ContentEnd);

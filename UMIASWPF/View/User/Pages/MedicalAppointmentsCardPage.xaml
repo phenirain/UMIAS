@@ -18,16 +18,22 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="30*"/>
-            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="60*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Приёмы" FontSize="20"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Приёмы" FontSize="20"/>
+        </Grid>
+        
         <Grid Grid.Column="0" Grid.Row="1" Background="{DynamicResource SecondaryBackground}">
             <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Background="#FFF">
-                <ListBox ItemsSource="{Binding Appointments}">
+                <ListBox ItemsSource="{Binding Elements}">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
+                            <StackPanel/>
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
                 </ListBox>
@@ -43,12 +49,15 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock Text="Осмотр травматолога-ортопеда" FontSize="20" Grid.Row="1"/>
+            <TextBlock  Text="{Binding NameDoctor}" FontSize="20" Grid.Row="1"/>
             <TextBlock Text="Врач:" FontSize="14" Grid.Row="2" HorizontalAlignment="Left"/>
-            <TextBlock Text="Москва, Каширское ш. д. 62" FontSize="14" Grid.Row="2" HorizontalAlignment="Right"/>
+            <TextBlock Text="{Binding Address}" FontSize="14" Grid.Row="2" HorizontalAlignment="Right"/>
 
-            <TextBlock Text="Сударева Е.Ю." FontSize="14" Grid.Row="3" HorizontalAlignment="Left" Width="131"/>
-            <TextBlock Text="12 декабря 2022 г." FontSize="14" Grid.Row="3" HorizontalAlignment="Right"/>
+            <TextBlock Text="{Binding NameAppointment}" FontSize="14" Grid.Row="3" HorizontalAlignment="Left" Width="131"/>
+            <TextBlock FontSize="14" Grid.Row="3" HorizontalAlignment="Right">
+                       <Run Text="{Binding Day}"/>
+                       <Run Text="г."/>
+            </TextBlock>
 
             <RichTextBox x:Name="RTB" Grid.Row="4"/>
         </Grid>

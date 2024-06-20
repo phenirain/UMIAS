@@ -1,6 +1,8 @@
-﻿using System.Windows;
+﻿using System.Net;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using UMIASWPF.Model;
 using UMIASWPF.View.User.Pages;
 using UMIASWPF.ViewModel.PatientViewModels;
 
@@ -42,19 +44,6 @@ namespace UMIASWPF.View.User
             WindowState = WindowState.Minimized;
         }
 
-<<<<<<< HEAD
-
-        private void MedicalCard_Click(object sender, MouseButtonEventArgs e)
-        {
-            Frame.Content = new MedicalAppointmentsCardPage();
-        }
-
-=======
-        private void MedicalCard_Click(object sender, MouseButtonEventArgs e)
-        {
-
-        }
->>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
         private void TreeHandler(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             TreeView tree = sender as TreeView;

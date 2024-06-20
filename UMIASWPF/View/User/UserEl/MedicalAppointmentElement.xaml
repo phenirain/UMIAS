@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:UMIASWPF.View.User.UserEl"
              mc:Ignorable="d" 
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-             d:DesignHeight="60" d:DesignWidth="350">
-    
+             d:DesignHeight="105" d:DesignWidth="350">
+
     <UserControl.Resources>
         <Style x:Key="ClearButton" TargetType="Button">
             <Setter Property="BorderThickness" Value="0"/>
@@ -19,35 +19,42 @@
         </Style>
     </UserControl.Resources>
 
-    <Button Style="{DynamicResource ClearButton}">
-    <Grid Background="{DynamicResource PrimaryBackground}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="12*"/>
-            <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="18*"/>
-            <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="12*"/>
-        </Grid.ColumnDefinitions>
+    <Button Style="{DynamicResource ClearButton}" Click="MClick">
+        <Grid Background="{DynamicResource PrimaryBackground}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="160*"/>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="160*"/>
+                <ColumnDefinition Width="12*"/>
+            </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="18*"/>
-            <RowDefinition/>
-            <RowDefinition Height="16*"/>
-            <RowDefinition Height="16*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="18*"/>
+                <RowDefinition/>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="16*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="3"  Grid.RowSpan="3" Text="{Binding AppointmentName}"
-               TextAlignment="Center" FontSize="12"/>
-        <TextBlock  Grid.Column="1" Grid.Row="3" Text="{Binding DoctorName}"
+            <TextBlock Grid.ColumnSpan="5"  Grid.RowSpan="2" Text="{Binding NameDoctor}"
+               TextAlignment="Center" FontSize="12" Margin="10,0,10,5"/>
+
+            <TextBlock  Grid.Column="1" Grid.Row="3" Text="{Binding NameAppointment}"
                Foreground="{DynamicResource SecondaryForeground}" TextAlignment="Left" FontSize="12"/>
-        <TextBlock Grid.Column="1"  Grid.Row="4" Text="{Binding AppointmentDate}" Foreground="{DynamicResource SecondaryForeground}"
-               TextAlignment="Left" FontSize="12"/>
-        <TextBlock Grid.Column="3"  Grid.Row="2" Text="{Binding AppointmentAddress}"
-               Foreground="{DynamicResource SecondaryForeground}"
-               TextAlignment="Right" FontSize="12"  Grid.RowSpan="4" TextWrapping="Wrap"/>    
-        
-    </Grid>
+
+            <TextBlock Grid.Column="1"  Grid.Row="4"  Foreground="{DynamicResource SecondaryForeground}"
+               TextAlignment="Left" FontSize="12">         
+                <Run Text="{Binding Day}"/>
+                <Run Text="г."/>
+            </TextBlock>
+
+
+            <TextBlock Grid.Column="3"  Grid.Row="2" Text="{Binding Address}"
+        Foreground="{DynamicResource SecondaryForeground}" HorizontalAlignment="Center" Margin="0,0,0,1"
+        TextAlignment="Right" FontSize="12" LineHeight="14" Width="146" Grid.RowSpan="4" TextWrapping="Wrap"/>
+
+        </Grid>
     </Button>
 </UserControl>
