@@ -68,11 +68,11 @@
                        Foreground="{DynamicResource SecondaryForeground}" Text="Выдан: АКЦИОНЕРНОЕ ОБЩЕСТВО “СТРАХОВАЯ КОМПАНИЯ “СОГАЗ-МЕД”" TextAlignment="Center"/>
         </Grid>
         <ui:TextBox Style="{DynamicResource ClearTextbox}"
-                    Text="{Binding Patient.Email}"
+                    Text="{Binding Patient.Phone}"
                     PlaceholderText="Телефон"
                     Height="40" Grid.Column="1" Grid.Row="1" Margin="10, 20, 0 , 10" FontSize="16"/>
         <ui:TextBox Style="{DynamicResource ClearTextbox}"
-                    Text="{Binding Patient.Phone}"
+                    Text="{Binding Patient.Email}"
                     PlaceholderText="Почта"
                     Height="40" Grid.Column="1" Grid.Row="2" Margin="10, 10, 0 , 10" FontSize="16"/>
         <ui:TextBox Style="{DynamicResource ClearTextbox}"

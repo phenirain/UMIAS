@@ -1,18 +1,8 @@
-using BingingLibrary;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using UMIASWPF.Model;
-using UMIASWPF.Properties;
 using UMIASWPF.Utilities;
 using System.Collections.ObjectModel; // Добавьте эту директиву для ObservableCollection
-using System.ComponentModel; // Добавьте эту директиву, если вы используете INotifyPropertyChanged
-using UMIASWPF.Utilities;
 using System.Windows.Documents;
-using UMIASWPF.View.User.Pages;
 using System.IO;
 using UMIASWPF.View.User.UserEl;
 using UMIASWPF.View.User;
@@ -83,7 +73,7 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             foreach (var appointment in appointments)
             {
                 var researchDocument =
-                    ApiHelper.Get<ResearchDocument>("AppointmentDocuments", (int)appointment.IdAppointment!);
+                    Get<ResearchDocument>("AppointmentDocuments", (int)appointment.IdAppointment!);
                 if (researchDocument != null)
                 {
                     var doctor = ApiHelper.Get<DoctorModel>("Doctors", (int)appointment.DoctorId!);
