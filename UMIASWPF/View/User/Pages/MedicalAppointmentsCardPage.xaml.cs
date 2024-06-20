@@ -28,7 +28,7 @@ namespace UMIASWPF.View.User.Pages
             InitializeComponent();
             _viewModel = new MedicalAppointmentViewModel();
             DataContext = _viewModel;
-            //RTB.Document = _viewModel.RTB;
+            RTB.Document = _viewModel.RTB;
         }
     }
 }

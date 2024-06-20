@@ -50,7 +50,7 @@
             <TextBlock Text="Сударева Е.Ю." FontSize="14" Grid.Row="3" HorizontalAlignment="Left" Width="131"/>
             <TextBlock Text="12 декабря 2022 г." FontSize="14" Grid.Row="3" HorizontalAlignment="Right"/>
 
-            <RichTextBox Grid.Row="4"/>
+            <RichTextBox x:Name="RTB" Grid.Row="4"/>
         </Grid>
     </Grid>
 </Page>
