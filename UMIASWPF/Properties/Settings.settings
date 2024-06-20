@@ -14,5 +14,8 @@
     <Setting Name="Doctor" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="Patients" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[{"Nickname":"Nekto228","Oms": 1}]</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

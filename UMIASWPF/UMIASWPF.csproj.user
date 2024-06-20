@@ -40,6 +40,9 @@
     <Compile Update="View\User\Pages\MedicalAppointmentsCardPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\User\Pages\MedCardAnalysesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\User\Pages\ProfilePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -75,9 +78,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\Authorization\AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -109,6 +109,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\Pages\MedicalAppointmentsCardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\MedCardAnalysesPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\User\Pages\ProfilePage.xaml">

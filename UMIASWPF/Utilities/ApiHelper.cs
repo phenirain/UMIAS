@@ -9,16 +9,16 @@ namespace UMIASWPF.Utilities
     public class ApiHelper: BindingHelper
     {
         private static string _url = "http://93.185.159.39:5000/api";
-        public static T? Get<T>(string model, int id = 0)
+        public static T? Get<T>(string model, long id = 0)
         {
             HttpClient client = new HttpClient();
             string request = id == 0 ? $"{model}" : $"{model}/{id}";
             HttpResponseMessage response = client.GetAsync($"{_url}/{model}/{(id != 0 ? id.ToString() : string.Empty)}").Result;
             if (response.StatusCode != HttpStatusCode.OK) return default;
-            return JsonConvert.DeserializeObject<T>(response.Content.ReadAsStringAsync().Result);
+            return JsonConvert.DeserializeObject<T>(response.Content.ReadAsStringAsync().Result, JsonSettings.PascalCaseSettings);
         }
 
-        public static bool Put(string json, string model, int id)
+        public static bool Put(string json, string model, long id)
         {
             HttpClient client = new HttpClient();
             HttpContent body = new StringContent(json, Encoding.UTF8, "application/json");
@@ -36,7 +36,7 @@ namespace UMIASWPF.Utilities
             return true;
         }
 
-        public static bool Delete(string model, int id)
+        public static bool Delete(string model, long id)
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = client.DeleteAsync($"{_url}/{model}/{id}").Result;

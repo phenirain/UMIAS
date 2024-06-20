@@ -3,7 +3,7 @@ using BingingLibrary;
 
 namespace UMIASWPF.Model
 {
-    public class Patient: BindingHelper
+    public class PatientModel: BindingHelper
     {
         public long Oms { get; set; }
 

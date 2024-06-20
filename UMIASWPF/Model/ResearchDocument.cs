@@ -28,8 +28,11 @@ namespace UMIASWPF.Model
 
         public string DocumentName { get; set; } = null!;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
     }
 }

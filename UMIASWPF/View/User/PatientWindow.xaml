@@ -74,16 +74,28 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
                 <TreeViewItem Header="Диспансеризация"  Foreground="#FFF"/>
             </TreeViewItem>
             <TreeViewItem Header="Медкарта" Foreground="#FFF">
-                <TreeViewItem Header="Приёмы" Foreground="#FFF" MouseUp="MedicalCard_Click"/>
+                <TreeViewItem Header="Приёмы" Foreground="#FFF" />
                 <TreeViewItem Header="Анализы" Foreground="#FFF"/>
                 <TreeViewItem Header="Исследования"  Foreground="#FFF"/>
             </TreeViewItem>
         </TreeView>
-        <Button Style="{StaticResource SettingsStyle}" BorderBrush="{x:Null}" Foreground="#FFF" Grid.Column="4" Grid.Row="5"  Height="26" VerticalAlignment="Top">
+        <Button Style="{StaticResource SettingsStyle}" BorderBrush="{x:Null}" Foreground="#FFF"
+                Grid.Column="4" Grid.Row="5"  Height="26" VerticalAlignment="Top" Click="Settings_Click">
         </Button>
         <TextBlock Foreground="#FFF" Grid.Row="5" Grid.Column="1" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="16">
             <Run Text="Полис ОМС: "/>
-            <Run Text="{Binding OMS}"/>
         </TextBlock>
+        <ComboBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" 
+                  Style="{DynamicResource MenuComboBox}" Margin="-60, 5, 40, 0"
+                  ItemsSource="{Binding Patients}" DisplayMemberPath="Nickname"
+                  SelectedItem="{Binding CurrentPatient}">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="SelectionChanged">
+                    <b:CallMethodAction
+                TargetObject="{Binding}"
+                MethodName="SelectionPatient"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+        </ComboBox>
     </Grid>
 </Window>

@@ -42,22 +42,30 @@ namespace UMIASWPF.View.User
             WindowState = WindowState.Minimized;
         }
 
+<<<<<<< HEAD
 
         private void MedicalCard_Click(object sender, MouseButtonEventArgs e)
         {
             Frame.Content = new MedicalAppointmentsCardPage();
         }
 
+=======
+        private void MedicalCard_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+>>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
         private void TreeHandler(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             TreeView tree = sender as TreeView;
-            switch(tree.SelectedItem)
+            TreeViewItem item = tree.SelectedItem as TreeViewItem;
+            switch(item.Header)
             {
                 case "Приёмы":
-
+                    Frame.Content = new MedicalAppointmentsCardPage();
                     break;
                 case "Анализы":
-
+                    Frame.Content = new MedCardAnalysesPage();
                     break;
                 case "Исследования":
 
@@ -70,7 +78,7 @@ namespace UMIASWPF.View.User
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Content = new MedicalAppointmentsCardPage();
+            Frame.Content = new ProfilePage();
         }
     }
 }

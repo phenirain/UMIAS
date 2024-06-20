@@ -19,7 +19,11 @@ using UMIASWPF.View.User;
 namespace UMIASWPF.ViewModel.PatientViewModels
 {
     public class MedicalAppointmentViewModel : ApiHelper
+<<<<<<< HEAD
     {
+=======
+    { 
+>>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
 
         #region Region
 
@@ -69,11 +73,17 @@ namespace UMIASWPF.ViewModel.PatientViewModels
 
         private int _id;
 
+<<<<<<< HEAD
 
         #endregion
         public MedicalAppointmentViewModel()
         {
             //var window = Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault();
+=======
+        public MedicalAppointmentViewModel()
+        {
+            var window = Application.Current.Windows.OfType<PatientWindow>().FirstOrDefault();
+>>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
             RTB = new();
             LoadCustomElements();
             LoadCards();
@@ -97,12 +107,23 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             var appointments = Get<List<Appointment>>("Appointments")!.Where(item => item.Oms == _oms).OrderBy(item => item.AppointmentDate).ToList();
             foreach (var appointment in appointments)
             {
+<<<<<<< HEAD
                 ResearchDocument researchDocument =
+=======
+                var researchDocument =
+>>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
                     ApiHelper.Get<ResearchDocument>("AppointmentDocuments", (int)appointment.IdAppointment!);
                 if (researchDocument != null)
                 {
                     var doctor = ApiHelper.Get<DoctorModel>("Doctors", (int)appointment.DoctorId!);
+<<<<<<< HEAD
                     var card = new MedicalAppointmentElement(researchDocument.DocumentName, $"{doctor!.Surname} {doctor.FirstName.Substring(0, 1)}. {doctor.Patronymic.Substring(0, 1)}.", appointment.AppointmentDate.ToString("dd MMMM yyyy"), doctor.WorkAddress, (int)doctor.IdDoctor, (int)appointment.IdAppointment);
+=======
+                    var card = new MedicalAppointmentElement(researchDocument.DocumentName,
+                        $"{doctor!.Surname} {doctor.FirstName.Substring(0, 1)}. {doctor.Patronymic.Substring(0, 1)}.",
+                        appointment.AppointmentDate.ToString("dd MMMM yyyy"), doctor.WorkAddress, (int)doctor.IdDoctor,
+                        (int)appointment.IdAppointment);
+>>>>>>> c2e212d6f1aba8972a21b3f0d756f207afd0da29
                     card.Click += (sender, args) => LoadInfo(sender, args);
                     Elements.Add(card);
                 }

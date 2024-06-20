@@ -12,7 +12,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="{Binding ActiveMonth}" Grid.Row="0" Padding="10, 10, 10, 0"/>
+        <TextBlock Text="{Binding ActiveMonth}" Foreground="{DynamicResource PrimaryForeground}"
+                   Grid.Row="0" Padding="10, 10, 10, 0"/>
         <ItemsControl Grid.Row="1" ItemsSource="{Binding MonthAppointments}" Margin="10, 0, 10, 15">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -20,8 +21,9 @@
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
         </ItemsControl>
-        <TextBlock Text="На этот месяц нет записей"  Grid.Row="2" x:Name="NoOne" Visibility="Collapsed"
-                   TextAlignment="Center" VerticalAlignment="Top" Foreground="#807F7F" Margin="0,70,0,0"/>
+        <TextBlock Text="На этот месяц нет записей"  Grid.Row="2" Foreground="{DynamicResource SecondaryForeground}"
+                   x:Name="NoOne" Visibility="Collapsed"
+                   TextAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0"/>
 
     </Grid>
 </UserControl>

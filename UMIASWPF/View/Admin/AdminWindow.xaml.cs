@@ -1,17 +1,27 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using UMIASApp.View.Pages;
+using UMIASWPF;
+using UMIASWPF.View.Authorization;
+using UMIASWPF.ViewModel;
+using Wpf.Ui.Controls;
 
-namespace UMIASWPF.View.Doctor
+namespace UMIASApp.View
 {
     /// <summary>
-    /// Логика взаимодействия для DoctorWindow.xaml
+    /// Логика взаимодействия для Page_Admin.xaml
     /// </summary>
-    public partial class DoctorWindow : Window
+    public partial class AdminWindow : Window
     {
-        public DoctorWindow()
+        AdminViewModel _viewModel;
+
+        public AdminWindow()
         {
             InitializeComponent();
+            _viewModel = new AdminViewModel();
+            SelectionFrame.Content = new UserPage(_viewModel);
+            DataContext = _viewModel;
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -39,7 +49,7 @@ namespace UMIASWPF.View.Doctor
 
         private void SwitchTheme(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            System.Windows.Controls.Button btn = (System.Windows.Controls.Button)sender;
             if (App.Theme == "Dark")
             {
                 btn.Style = FindResource("MoonStyle") as Style;
@@ -52,38 +62,13 @@ namespace UMIASWPF.View.Doctor
             }
         }
 
-        private void Analys_Checked(object sender, RoutedEventArgs e)
+        private void Exit(object sender, RoutedEventArgs e)
         {
-            if (sender is CheckBox box)
-            {
-                if ((bool)box.IsChecked)
-                {
-                    AnalysName.IsEnabled = true;
-                    Analyses.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    AnalysName.IsEnabled = false;
-                    Analyses.Visibility = Visibility.Collapsed;
-                }
-            }
+            AuthorizationWindow window = new AuthorizationWindow();
+            window.Show();
+            Close();
         }
 
-        private void Research_Checked(object sender, RoutedEventArgs e)
-        {
-            if (sender is CheckBox box)
-            {
-                if ((bool)box.IsChecked)
-                {
-                    ResearchName.IsEnabled = true;
-                    Researches.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    ResearchName.IsEnabled = false;
-                    Researches.Visibility = Visibility.Collapsed;
-                }
-            }
-        }
+
     }
 }

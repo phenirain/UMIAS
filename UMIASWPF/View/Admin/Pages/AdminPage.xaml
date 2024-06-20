@@ -1,0 +1,46 @@
+﻿<Page x:Class="UMIASApp.View.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:local="clr-namespace:UMIASApp.View.Pages"
+      mc:Ignorable="d" 
+      d:Height="Auto" d:DesignWidth="389"
+      Title="OnlyAdmin" FontFamily="{DynamicResource Inter}">
+
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="362*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="0" Margin="0, 5" Height="25"
+                    Text="{Binding Admin.EnterPassword}"
+                    PlaceholderText="Пароль для входа"
+                    Foreground="{DynamicResource SecondaryForeground}"
+                    VerticalContentAlignment="Center" Grid.Column="1"/>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="1" Margin="0, 5" Height="25" 
+                    Text="{Binding Admin.SurnameAdmin}"
+                    PlaceholderText="Фамилия"
+                    Foreground="{DynamicResource SecondaryForeground}"
+                    VerticalContentAlignment="Center" Grid.Column="1"/>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="2" Margin="0, 5" Height="25"
+                    Text="{Binding Admin.FirstName}"
+                    PlaceholderText="Имя"
+                    Foreground="{DynamicResource SecondaryForeground}"
+                    VerticalContentAlignment="Center" Grid.Column="1"/>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="3" Margin="0, 5" Height="25"
+                    Text="{Binding Admin.Patronymic}"
+                    PlaceholderText="Отчество"
+                    Foreground="{DynamicResource SecondaryForeground}"
+                    VerticalContentAlignment="Center" Grid.Column="1"/>
+    </Grid>
+</Page>
