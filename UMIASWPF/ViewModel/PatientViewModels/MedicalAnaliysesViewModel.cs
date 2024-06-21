@@ -98,7 +98,7 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             var appointments = Get<List<Appointment>>("Appointments")!.Where(item => item.Oms == _oms).OrderBy(item => item.AppointmentDate);
             foreach (var appointment in appointments)
             {
-                var analysDocument = ApiHelper.Get<AnalysDocument>("AppointmentDocuments", (int)appointment.IdAppointment!);
+                var analysDocument = ApiHelper.Get<AnalysDocument>("AnalysDocuments", (int)appointment.IdAppointment!);
                 if (analysDocument != null)
                 {
                     var doctor = ApiHelper.Get<DoctorModel>("Doctors",  (int)appointment.DoctorId!);
@@ -118,7 +118,7 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             NameAppointment = card.NameAnalys;
             Address = card.Address;
             Day = card.Day;
-            var document = Get<ResearchDocument>("AppointmentDocuments", card.IdAppointment);
+            var document = Get<ResearchDocument>("ResearchDocuments", card.IdAppointment);
             File.WriteAllText("buffer.rtf", document.Rtf);
             var range = new TextRange(RTB.ContentStart, RTB.ContentEnd);
             var fs = new FileStream("buffer.rtf", FileMode.Open);

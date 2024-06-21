@@ -20,8 +20,8 @@
                     <RowDefinition Height="25*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="{Binding AnalyseName}" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock Text="{Binding AnalyseDate}" Grid.Column="1" Grid.Row="2" FontSize="12"
+            <TextBlock Text="{Binding NameAnalys}" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBlock Text="{Binding Day}" Grid.Column="1" Grid.Row="2" FontSize="12"
                        Foreground="#807F7F" TextAlignment="Center"  VerticalAlignment="Center" />
             </Grid>
         </Button>
