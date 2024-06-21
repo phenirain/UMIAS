@@ -5,13 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UMIASWPF.View.User.UserEl"
              mc:Ignorable="d" 
-             d:DesignHeight="60" d:DesignWidth="350">
-    <Grid Background="{DynamicResource PrimaryBackground}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="110*"/>
-            <ColumnDefinition Width="6*"/>
-        </Grid.ColumnDefinitions>
+             d:DesignHeight="105" d:DesignWidth="350">
 
         <Button Style="{DynamicResource ClearButton}">
             <Grid Background="{DynamicResource PrimaryBackground}">
@@ -31,5 +25,4 @@
                        Foreground="#807F7F" TextAlignment="Center"  VerticalAlignment="Center" />
             </Grid>
         </Button>
-    </Grid>
 </UserControl>

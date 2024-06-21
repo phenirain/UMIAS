@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UMIASWPF.ViewModel.PatientViewModels;
 
 namespace UMIASWPF.View.User.Pages
 {
@@ -20,9 +21,14 @@ namespace UMIASWPF.View.User.Pages
     /// </summary>
     public partial class MedCardAnalysesPage : Page
     {
+        private MedicalAnaliysesViewModel _viewModel;
+
         public MedCardAnalysesPage()
         {
             InitializeComponent();
+            _viewModel = new MedicalAnaliysesViewModel();
+            DataContext = _viewModel;
+            //RTB.Document = _viewModel.RTB;
         }
     }
 }
