@@ -27,6 +27,5 @@ namespace UMIASWPF.Model
         public byte[]? Attachment { get; set; }
 
         public string DocumentName { get; set; } = null!;
-
     }
 }
