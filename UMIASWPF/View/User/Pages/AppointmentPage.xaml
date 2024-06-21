@@ -1,0 +1,76 @@
+﻿<Page x:Class="UMIASWPF.View.User.Pages.AppointmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UMIASWPF.View.User.Pages"
+      mc:Ignorable="d" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:el="clr-namespace:UMIASWPF.View.User.UserEl"
+        d:DesignHeight="850" d:DesignWidth="1180"
+        FontFamily="{DynamicResource Inter}"
+      Title="AppointmentPage">
+
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="160"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Записаться на приём" FontSize="20" Foreground="{DynamicResource PrimaryForeground}"/>
+        <TextBlock Grid.Row="1" Text="ОРВИ/ COVID 19" FontSize="20" Margin="0, 10" Foreground="{DynamicResource PrimaryForeground}"/>
+        <Grid Background="{DynamicResource SecondaryBackground}" Margin="0, 10" Grid.Row="2">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10">
+                <ListBox ItemsSource="{Binding ARI}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+        <TextBlock Grid.Row="3" Text="Специальности" FontSize="20" Margin="0, 10" Foreground="{DynamicResource PrimaryForeground}"/>
+        <Grid Background="{DynamicResource SecondaryBackground}" Margin="0, 10" Grid.Row="4">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10">
+                <ListBox ItemsSource="{Binding Specialities}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+        <TextBlock Grid.Row="5" Text="Направления" FontSize="20" Margin="0, 10" Foreground="{DynamicResource PrimaryForeground}"/>
+        <Grid Background="{DynamicResource SecondaryBackground}" Margin="0, 10" Grid.Row="6">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10">
+                <ListBox ItemsSource="{Binding Directions}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+        <TextBlock Grid.Row="7" Text="Цели обращения" FontSize="20" Margin="0, 10" Foreground="{DynamicResource PrimaryForeground}"/>
+        <Grid Background="{DynamicResource SecondaryBackground}" Margin="0, 10" Grid.Row="8">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#FFF" Margin="10" >
+                <ListBox ItemsSource="{Binding PurposeAppeals}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

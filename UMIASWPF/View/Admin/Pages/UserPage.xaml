@@ -1,0 +1,63 @@
+﻿<Page x:Class="UMIASApp.View.Pages.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:local="clr-namespace:UMIASApp.View.Pages"
+      mc:Ignorable="d" 
+      d:Height="Auto" d:DesignWidth="389" FontFamily="{DynamicResource Inter}"
+      Title="UserPage">
+
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="362*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="0" Margin="0, 5" Height="25"
+            Text="{Binding Patient.Oms}"
+            PlaceholderText="Номер полиса" 
+            Foreground="{DynamicResource SecondaryForeground}"
+            VerticalContentAlignment="Center" Grid.Column="1"/>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="1" Margin="0, 5" Height="25"
+                Text="{Binding Patient.Surname}"
+                PlaceholderText="Фамилия" 
+                Foreground="{DynamicResource SecondaryForeground}"
+                VerticalContentAlignment="Center" Grid.Column="1"/>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="1" Margin="0, 5" Height="25"
+                Text="{Binding Patient.Surname}"
+                PlaceholderText="Фамилия" 
+                Foreground="{DynamicResource SecondaryForeground}"
+                VerticalContentAlignment="Center" Grid.Column="1"/>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="2" Margin="0, 5" Height="25"
+                Text="{Binding Patient.FirstName}"
+                PlaceholderText="Имя" 
+                Foreground="{DynamicResource SecondaryForeground}"
+                VerticalContentAlignment="Center" Grid.Column="1"/>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="3" Margin="0, 5" Height="25"
+                Text="{Binding Patient.Patronymic}"
+                PlaceholderText="Отчество" 
+                Foreground="{DynamicResource SecondaryForeground}"
+                VerticalContentAlignment="Center" Grid.Column="1"/>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="4"
+                Text="{Binding Patient.BirthDay}"
+                PlaceholderText="Дата рождения" Margin="0, 5" Height="25"
+                Foreground="{DynamicResource SecondaryForeground}"
+                Grid.Column="1" VerticalContentAlignment="Center"/>
+        <ui:TextBox Style="{DynamicResource ClearTextbox}" Grid.Row="5"
+                Text="{Binding Patient.AddressPatient}"
+                PlaceholderText="Адрес прописки" Margin="0, 5" Height="25"
+                Foreground="{DynamicResource SecondaryForeground}"
+                Grid.Column="1" VerticalContentAlignment="Center" />
+    </Grid>
+</Page>

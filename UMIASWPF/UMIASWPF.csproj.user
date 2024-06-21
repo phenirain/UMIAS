@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\Authorization\AuthorizationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Authorization\Pages\DoctorAuthorizationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Authorization\Pages\PatientAuthorizationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Doctor\DoctorEl\BlackStartOrCancelElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Doctor\DoctorEl\DirectionElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Doctor\DoctorEl\RecordCompletedElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Doctor\DoctorEl\StartOrCancelElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Doctor\DoctorWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\AppointmentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\MainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\MedicalAppointmentsCardPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\MedCardAnalysesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\MedicalResearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\ProfilePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\Pages\SpecialistSelectionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\AllPostsElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\AnalysElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\AppointmentElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\DateTimeItemsControlElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\DoctorElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\MedicalAppointmentElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\MedicalResearchElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\SpecialistElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\UserEl\TimeElement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\User\PatientWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Authorization\AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Authorization\Pages\DoctorAuthorizationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Authorization\Pages\PatientAuthorizationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Doctor\DoctorEl\BlackStartOrCancelElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Doctor\DoctorEl\DirectionElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Doctor\DoctorEl\RecordCompletedElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Doctor\DoctorEl\StartOrCancelElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Doctor\DoctorWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\AppointmentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\MedicalAppointmentsCardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\MedCardAnalysesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\MedicalResearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\Pages\SpecialistSelectionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\AllPostsElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\AnalysElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\AppointmentElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\DateTimeItemsControlElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\DoctorElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\MedicalAppointmentElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\MedicalResearchElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\SpecialistElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\UserEl\TimeElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\User\PatientWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

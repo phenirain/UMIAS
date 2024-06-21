@@ -1,0 +1,66 @@
+﻿<Page x:Class="UMIASWPF.View.User.Pages.MedicalAppointmentsCardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UMIASWPF.View.User.Pages"
+      mc:Ignorable="d" 
+      xmlns:el="clr-namespace:UMIASWPF.View.User.UserEl"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      d:DesignHeight="850" d:DesignWidth="1180"
+      FontFamily="{DynamicResource Inter}"
+      Title="MedicalAppointmentsCardPage">
+
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Приёмы" FontSize="20"/>
+        </Grid>
+        
+        <Grid Grid.Column="0" Grid.Row="1" Background="{DynamicResource SecondaryBackground}">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Background="#FFF">
+                <ListBox ItemsSource="{Binding Elements}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+        
+        <Grid Grid.Column="2" Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="400*" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding NameDoctor}" FontSize="20" Grid.Row="0"/>
+            <TextBlock Text="Врач:" FontSize="14" Grid.Row="1" HorizontalAlignment="Left"/>
+            <TextBlock Text="{Binding Address}" FontSize="14" Grid.Row="1" HorizontalAlignment="Right"/>
+            <TextBlock Text="{Binding NameAppointment}" FontSize="14" Grid.Row="2" HorizontalAlignment="Left"/>
+            <TextBlock FontSize="14" Grid.Row="2" HorizontalAlignment="Right">
+                       <Run Text="{Binding Day}"/>
+                       <Run Text="г."/>
+            </TextBlock>
+
+            <RichTextBox x:Name="RTB" Grid.Row="5" Margin="0,0,0,450"/>
+        </Grid>
+    </Grid>
+</Page>

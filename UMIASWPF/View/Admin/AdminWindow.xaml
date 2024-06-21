@@ -1,0 +1,140 @@
+﻿<Window x:Class="UMIASApp.View.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:local="clr-namespace:UMIASWPF"
+        mc:Ignorable="d"
+        Title="EMIAS" Height="850" Width="1500" MouseLeftButtonDown="MoveWindow"
+        Background="White" FontFamily="{DynamicResource Inter}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+        CaptionHeight="0"
+        ResizeBorderThickness="5"
+        GlassFrameThickness="0"
+        CornerRadius="0"/>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1105*"/>
+            <ColumnDefinition Width="286*"/>
+
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center" Margin="0, 0, 15, 0"
+                    Grid.Column="1" Panel.ZIndex="1">
+            <Button Style="{StaticResource MinimizeButtonStyle}" Foreground="#FFF"
+                Background="Transparent" BorderBrush="{x:Null}"  Grid.Column="0" Click="RollUpButton_Click"/>
+            <Button Style="{StaticResource ToRollButtonStyle}"  Foreground="#FFF"
+                Background="Transparent" BorderBrush="{x:Null}"  Grid.Column="1" Click="UnwrapButton_Click"/>
+            <Button Style="{StaticResource CloseButtonStyle}" Foreground="#FFF"
+                Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseButton_Click"/>
+        </StackPanel>
+
+        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="#007BFE">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Foreground="White" VerticalAlignment="Center"
+                       FontSize="20" TextAlignment="Center" Text="ЕМИАС — Администратор"
+                       FontWeight="Bold" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="10"/>
+            <Button Style="{StaticResource MoonStyle}" BorderBrush="{x:Null}"
+        Grid.Column="1" Click="SwitchTheme" Foreground="White" VerticalAlignment="Center"
+        HorizontalAlignment="Left" Width="20" Height="22" Grid.Row="0"/>
+        </Grid>
+        <ui:DataGrid Background="{DynamicResource SecondaryBackground}"
+            Grid.Column="0" Grid.Row="1"
+            x:Name="DGrid" IsReadOnly="True"
+            CanUserReorderColumns="False"
+            CanUserResizeColumns="False"
+            CanUserSortColumns = "False"
+            HorizontalScrollBarVisibility="Visible"
+            VerticalScrollBarVisibility="Visible"
+                  VirtualizingPanel.ScrollUnit="Pixel"
+            FontSize="12" BorderBrush="{x:Null}"
+            ItemsSource="{Binding Items}">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="SelectionChanged">
+                    <b:CallMethodAction
+                                    TargetObject="{Binding}"
+                                    MethodName="SelectionDataGrid"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+        </ui:DataGrid>
+        <Grid 
+            Background="{DynamicResource PrimaryBackground}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ComboBox ItemsSource="{Binding Roles}" SelectedItem="{Binding SelectedItem}"
+                      Tag="Роль пользователя" Style="{DynamicResource ClearComboBoxStyle}"
+                      Grid.Row="0" Margin="10, 10, 10, 0">
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="SelectionChanged">
+                        <b:CallMethodAction
+                            TargetObject="{Binding}"
+                            MethodName="SelectionRole"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </ComboBox>
+            <Border Grid.Row="1" Grid.Column="1" Height="1" Background="#FF007BFE" HorizontalAlignment="Stretch" Margin="30, 5"/>
+            <Frame x:Name="SelectionFrame" Grid.Row="2"/>
+            <Grid Grid.Row="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ui:Button Content="Добавить запись" Grid.Row="0" Margin="10,5"
+                           Style="{DynamicResource FocusingButton}" Height="30">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="Click">
+                            <b:CallMethodAction
+                                TargetObject="{Binding}"
+                                MethodName="Add"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                </ui:Button>
+                <ui:Button Content="Изменить запись" Grid.Row="1" Margin="10,5"
+                           Style="{DynamicResource FocusingButton}" Height="30">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="Click">
+                            <b:CallMethodAction
+                                TargetObject="{Binding}"
+                                MethodName="Update"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                </ui:Button>
+                <ui:Button Content="Удалить запись" Grid.Row="2" Margin="10,5"
+                           Style="{DynamicResource FocusingButton}" Height="30">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="Click">
+                            <b:CallMethodAction
+                                            TargetObject="{Binding}"
+                                            MethodName="Delete"/>
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                </ui:Button>
+                <Border Grid.Row="3" Grid.Column="3" Height="1" Margin="30, 0"
+                        Background="#FF007BFE" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+                <ui:Button Content="Выйти из аккаунта" Grid.Row="4" Margin="10, 5, 10, 10"
+                           Style="{DynamicResource AttentionButton}" Height="30" Click="Exit"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+
