@@ -1,6 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using UMIASWPF.View.Authorization;
+using UMIASWPF.ViewModel;
 
 namespace UMIASWPF.View.Doctor
 {
@@ -12,6 +14,10 @@ namespace UMIASWPF.View.Doctor
         public DoctorWindow()
         {
             InitializeComponent();
+            DoctorViewModel _viewModel = new DoctorViewModel();
+            DataContext = _viewModel;
+            Analyses.Document = _viewModel.AnalysesRTB;
+            Researches.Document = _viewModel.ResearchRTB;
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -84,6 +90,13 @@ namespace UMIASWPF.View.Doctor
                     Researches.Visibility = Visibility.Collapsed;
                 }
             }
+        }
+
+        private void Leave(object sender, RoutedEventArgs e)
+        {
+            AuthorizationWindow window = new AuthorizationWindow();
+            window.Show();
+            Close();
         }
     }
 }

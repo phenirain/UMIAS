@@ -7,9 +7,17 @@ namespace UMIASWPF.View.Doctor.DoctorEl
     /// </summary>
     public partial class BlackStartOrCancelElement : UserControl
     {
-        public BlackStartOrCancelElement()
+        public string FIO {  get; set; }
+        public string Time { get; set; }
+
+
+        public BlackStartOrCancelElement(string fIO, TimeOnly time)
         {
             InitializeComponent();
+            FIO = fIO;
+            Time = time.ToString();
+            DataContext = this;
         }
+
     }
 }
