@@ -8,6 +8,7 @@ using System.Windows.Documents;
 using System.IO;
 using UMIASWPF.View.User.UserEl;
 using UMIASWPF.View.User;
+using UMIASWPF.Properties;
 
 namespace UMIASWPF.ViewModel.PatientViewModels
 {

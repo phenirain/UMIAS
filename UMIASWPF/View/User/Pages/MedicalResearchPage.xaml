@@ -5,12 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UMIASWPF.View.User.Pages"
       mc:Ignorable="d" 
-        xmlns:el="clr-namespace:UMIASWPF.View.User.UserEl"
-  xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-  d:DesignHeight="850" d:DesignWidth="1180"
-  FontFamily="{DynamicResource Inter}"
-  Title="MedicalAppointmentsCardPage">
-
+    xmlns:el="clr-namespace:UMIASWPF.View.User.UserEl"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    d:DesignHeight="850" d:DesignWidth="1180"
+    FontFamily="{DynamicResource Inter}"
+    Title="MedicalAppointmentsCardPage">
     <Grid Background="{DynamicResource PrimaryBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -19,6 +18,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="60*"/>
         </Grid.ColumnDefinitions>
         <Grid>
@@ -40,26 +40,27 @@
             </ScrollViewer>
         </Grid>
 
-        <Grid Grid.Column="1" Grid.Row="1">
+        <Grid Grid.Column="2" Grid.Row="1">
             <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="400*" />
             </Grid.RowDefinitions>
-            <TextBlock  Text="{Binding NameResearch}" FontSize="20" Grid.Row="1"/>
-            <TextBlock Text="Врач:" FontSize="14" Grid.Row="2" HorizontalAlignment="Left"/>
-            <TextBlock Text="{Binding Address}" FontSize="14" Grid.Row="2" HorizontalAlignment="Right"/>
-
-            <TextBlock Text="{Binding NameDoctor}" FontSize="14" Grid.Row="3" HorizontalAlignment="Left" Width="131"/>
-            <TextBlock FontSize="14" Grid.Row="3" HorizontalAlignment="Right">
+            <TextBlock Text="{Binding NameResearch}" FontSize="20" Grid.Row="0"/>
+            <TextBlock Text="Врач:" FontSize="14" Grid.Row="1" HorizontalAlignment="Left"/>
+            <TextBlock Text="{Binding Address}" FontSize="14" Grid.Row="1" HorizontalAlignment="Right"/>
+            <TextBlock Text="{Binding NameDoctor}" FontSize="14" Grid.Row="2" HorizontalAlignment="Left"/>
+            <TextBlock FontSize="14" Grid.Row="2" HorizontalAlignment="Right">
                    <Run Text="{Binding Day}"/>
                    <Run Text="г."/>
             </TextBlock>
-            <ui:Button Content="Скачать файл" FontSize="14" Grid.Row="4" Style="{DynamicResource FocusingButton}" Command="{Binding DownloadCommand}"/>
-            <RichTextBox x:Name="RTB" Grid.Row="5" Margin="0,26,0,-71" />
+            
+            <ui:Button Content="Скачать файл" FontSize="14" Grid.Row="3" Style="{DynamicResource FocusingButton}" Command="{Binding DownloadCommand}" Height="30"/>
+            <RichTextBox x:Name="RTB" Grid.Row="5" Margin="0,0,0,450"/>
+            
         </Grid>
     </Grid>
 </Page>

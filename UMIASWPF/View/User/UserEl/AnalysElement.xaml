@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="105" d:DesignWidth="350">
 
-        <Button Style="{DynamicResource ClearButton}">
+    <Button Style="{DynamicResource ClearButton}" Click="MClick">
             <Grid Background="{DynamicResource PrimaryBackground}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="6*"/>
