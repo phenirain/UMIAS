@@ -22,12 +22,12 @@ namespace UMIASWPF.ViewModel.PatientViewModels
     {
         #region Region
 
-        private string _nameAppointment;
+        private string _nameAnalys;
 
-        public string NameAppointment
+        public string NameAnalys
         {
-            get => _nameAppointment;
-            set => SetField(ref _nameAppointment, value);
+            get => _nameAnalys;
+            set => SetField(ref _nameAnalys, value);
         }
 
         private string _address;
@@ -38,13 +38,7 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             set => SetField(ref _address, value);
         }
 
-        private string _nameAnaliys;
 
-        public string NameAnaliys
-        {
-            get => _nameAnaliys;
-            set => SetField(ref _nameAnaliys, value);
-        }
 
         private string _day;
 
@@ -115,7 +109,7 @@ namespace UMIASWPF.ViewModel.PatientViewModels
         {
             var card = sender as AnalysElement;
             _id = card.IdAppointment;
-            NameAppointment = card.NameAnalys;
+            NameAnalys = card.NameAnalys;
             Address = card.Address;
             Day = card.Day;
             var document = Get<ResearchDocument>("ResearchDocuments", card.IdAppointment);
