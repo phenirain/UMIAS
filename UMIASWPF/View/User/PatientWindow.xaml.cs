@@ -57,7 +57,7 @@ namespace UMIASWPF.View.User
                     Frame.Content = new MedCardAnalysesPage();
                     break;
                 case "Исследования":
-
+                    Frame.Content = new MedicalResearchPage();
                     break;
                 case "Записи и направления":
                     Frame.Content = new MainPage();
