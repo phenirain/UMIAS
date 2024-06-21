@@ -7,9 +7,15 @@ namespace UMIASWPF.View.Doctor.DoctorEl
     /// </summary>
     public partial class RecordCompletedElement : UserControl
     {
-        public RecordCompletedElement()
+        public string FIO { get; set; }
+        public string Time { get; set; }
+
+        public RecordCompletedElement(string fIO, TimeOnly time)
         {
             InitializeComponent();
+            FIO = fIO;
+            Time = time.ToString();
+            DataContext = this;
         }
     }
 }
