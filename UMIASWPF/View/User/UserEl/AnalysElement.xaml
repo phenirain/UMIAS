@@ -5,13 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UMIASWPF.View.User.UserEl"
              mc:Ignorable="d" 
-             d:DesignHeight="60" d:DesignWidth="350">
-    <Grid Background="{DynamicResource PrimaryBackground}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="110*"/>
-            <ColumnDefinition Width="6*"/>
-        </Grid.ColumnDefinitions>
+             d:DesignHeight="105" d:DesignWidth="350">
 
         <Button Style="{DynamicResource ClearButton}">
             <Grid Background="{DynamicResource PrimaryBackground}">
@@ -26,10 +20,9 @@
                     <RowDefinition Height="25*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="{Binding AnalyseName}" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock Text="{Binding AnalyseDate}" Grid.Column="1" Grid.Row="2" FontSize="12"
+            <TextBlock Text="{Binding NameAnalys}" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBlock Text="{Binding Day}" Grid.Column="1" Grid.Row="2" FontSize="12"
                        Foreground="#807F7F" TextAlignment="Center"  VerticalAlignment="Center" />
             </Grid>
         </Button>
-    </Grid>
 </UserControl>
