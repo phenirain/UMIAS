@@ -6,18 +6,20 @@
              xmlns:local="clr-namespace:UMIASWPF.View.Doctor.DoctorEl"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
              mc:Ignorable="d" 
-             d:DesignHeight="28" d:DesignWidth="1079">
-    <Grid Background="{DynamicResource PrimaryBackground}">
+             d:Height="40" d:Width="1079" FontFamily="{DynamicResource Inter}">
+    <Grid Background="{DynamicResource PrimaryBackground}" Margin="5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="71*"/>
-            <ColumnDefinition Width="103*"/>
-            <ColumnDefinition Width="87*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Направление к специалисту:" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
-        <TextBlock Name="SpecialistField" Text="Офтальмолог" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        <ui:Button Style="{StaticResource DeleteDirections}"  BorderBrush="{x:Null}" Grid.Column="3" HorizontalAlignment="Right"/>
+        <TextBlock Text="Направление к специалисту:" Grid.Column="0" Foreground="{DynamicResource PrimaryForeground}"
+                   HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="20, 0, 10, 0"/>
+        <TextBlock Foreground="{DynamicResource PrimaryForeground}"
+            Text="{Binding Specialist}" Grid.Column="1" VerticalAlignment="Center"/>
+        <ui:Button Style="{StaticResource DeleteDirections}"  BorderBrush="{x:Null}" Margin="0, 0, 10, 0"
+                   Grid.Column="3" HorizontalAlignment="Right" Click="DeleteSelf"/>
     </Grid>
 </UserControl>
