@@ -85,7 +85,7 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
         <TextBlock Foreground="#FFF" Grid.Row="5" Grid.Column="1" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="16">
             <Run Text="Полис ОМС: "/>
         </TextBlock>
-        <ComboBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" 
+        <ComboBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"  Foreground="{DynamicResource PrimaryForeground}"
                   Style="{DynamicResource MenuComboBox}" Margin="-60, 5, 40, 0"
                   ItemsSource="{Binding Patients}" DisplayMemberPath="Nickname"
                   SelectedItem="{Binding CurrentPatient}">

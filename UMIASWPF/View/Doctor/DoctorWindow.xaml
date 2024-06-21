@@ -120,7 +120,7 @@
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30*"/>
-                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="25*"/>
                     <RowDefinition Height="25*"/>
                     <RowDefinition Height="35*"/>
@@ -134,12 +134,12 @@
                     <RowDefinition Height="50*"/>
                     <RowDefinition Height="22*"/>
                     <RowDefinition Height="25*"/>
-                    <RowDefinition Height="14*"/>
-                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="41*"/>
-                    <RowDefinition Height="161*"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="45*"/>
-                    <RowDefinition Height="182*"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="26*"/>
                     <RowDefinition Height="11*"/>
                     <RowDefinition Height="24*"/>
@@ -208,7 +208,7 @@
                          Grid.ColumnSpan="7"  Foreground="#807F7F" FontSize="14"  IsEnabled="False"
                          Style="{DynamicResource ClearTextbox}" VerticalAlignment="Center" Margin=" 55,0,0,0" />
 
-                <RichTextBox x:Name="Analyses" Grid.Row="18" Grid.ColumnSpan="8" Visibility="Collapsed"/>
+                <RichTextBox x:Name="Analyses" Grid.Row="18" Grid.ColumnSpan="8" Visibility="Collapsed" MinHeight="300"/>
                 <Border 
                     Grid.Column="0" Grid.Row="19" HorizontalAlignment="Center" VerticalAlignment="Center" 
                     Width="24" Height="24"
@@ -223,7 +223,7 @@
                          Grid.ColumnSpan="7"  Foreground="#807F7F" Style="{DynamicResource ClearTextbox}"
                             FontSize="14"  VerticalAlignment="Center" Margin="100,0,0,0"/>
 
-                <RichTextBox x:Name="Researches" Grid.Row="20" Grid.ColumnSpan="8" Visibility="Collapsed"/>
+                <RichTextBox x:Name="Researches" Grid.Row="20" Grid.ColumnSpan="8" Visibility="Collapsed" MinHeight="300"/>
 
                 <Button Content="Прикрепить дополнительные файлы" Background="#007BFE" Foreground ="#FFFFFF" FontSize="16" Grid.Row="21" Grid.ColumnSpan="8" HorizontalAlignment="Stretch" Height="32"  />
 

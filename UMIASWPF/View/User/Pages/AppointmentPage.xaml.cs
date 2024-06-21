@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using UMIASWPF.ViewModel.PatientViewModels;
 
 namespace UMIASWPF.View.User.Pages
 {
@@ -10,6 +11,7 @@ namespace UMIASWPF.View.User.Pages
         public AppointmentPage()
         {
             InitializeComponent();
+            DataContext = new AppointmentViewModel();
         }
     }
 }

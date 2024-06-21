@@ -1,17 +1,10 @@
-using BingingLibrary;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using UMIASWPF.Model;
-using UMIASWPF.Properties;
 using UMIASWPF.Utilities;
 using System.Collections.ObjectModel; 
 using System.ComponentModel;
+using System.Collections.ObjectModel; // Äîáàâüòå ýòó äèðåêòèâó äëÿ ObservableCollection
 using System.Windows.Documents;
-using UMIASWPF.View.User.Pages;
 using System.IO;
 using UMIASWPF.View.User.UserEl;
 using UMIASWPF.View.User;

@@ -140,6 +140,15 @@
                 </ListBox>
             </ScrollViewer>
         </Grid>
-        <ui:Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Margin="25, 20, 20, 10" Height="30" Style="{DynamicResource FocusingButton}" Content="Записаться на прием"></ui:Button>
+        <ui:Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Margin="25, 20, 20, 10" Height="30"
+                   Style="{DynamicResource FocusingButton}" Content="Записаться на прием">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="Click">
+                    <b:CallMethodAction
+                        TargetObject="{Binding}"
+                        MethodName="ToAppointmentPage"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+        </ui:Button>
     </Grid>
 </Page>

@@ -94,7 +94,7 @@ namespace UMIASWPF.ViewModel.PatientViewModels
             List<Speciality>? specialities = Get<List<Speciality>>("Specialities");
             foreach(var speciality in specialities)
             {
-                Doctors.Add(new DoctorElement(speciality.NumberImage, speciality.NameSpecialities));
+                Doctors.Add(new DoctorElement(speciality.NumberImage.ToString(), speciality.NameSpecialities));
             }
         }
 
@@ -220,6 +220,12 @@ namespace UMIASWPF.ViewModel.PatientViewModels
                 Delete("AppointmentDocuments", id);
                 Delete("Appointments", id);
             }
+        }
+
+        public void ToAppointmentPage()
+        {
+            var window = Application.Current.Windows.OfType<PatientWindow>().First()!;
+            window.Frame.Content = new AppointmentPage();
         }
 
         private void MoveAppointment(object sender, EventArgs args)

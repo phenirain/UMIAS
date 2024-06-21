@@ -18,7 +18,7 @@ namespace UMIASWPF.View.User
         {
             InitializeComponent();
             DataContext = new PatientViewModel();
-            Frame.Content = new MainPage();
+            Frame.Content = new AppointmentPage();
         }
 
         private void MoveWindow(object sender, MouseButtonEventArgs e)
