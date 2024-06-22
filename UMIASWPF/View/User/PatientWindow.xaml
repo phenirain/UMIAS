@@ -85,9 +85,9 @@ Background="Transparent"  BorderBrush="{x:Null}"  Grid.Column="2" Click="CloseBu
         <TextBlock Foreground="#FFF" Grid.Row="5" Grid.Column="1" FontSize="14" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="16">
             <Run Text="Полис ОМС: "/>
         </TextBlock>
-        <ComboBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"  Foreground="#FFF"
+        <ComboBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" 
                   Style="{DynamicResource MenuComboBox}" Margin="-60, 5, 40, 0"
-                  ItemsSource="{Binding Patients}" DisplayMemberPath="Nickname"
+                  ItemsSource="{Binding Patients}" DisplayMemberPath="Nickname" Foreground="#FFF"
                   SelectedItem="{Binding CurrentPatient}">
             <b:Interaction.Triggers>
                 <b:EventTrigger EventName="SelectionChanged">
